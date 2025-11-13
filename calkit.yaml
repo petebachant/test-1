@@ -9,6 +9,10 @@ environments:
     kind: uv
     path: pyproject.toml
 
+  tex:
+    kind: docker
+    image: texlive/texlive:latest-full
+    description: TeXlive via Docker.
 pipeline:
   stages:
     analyze-penguins:
@@ -23,6 +27,21 @@ pipeline:
         - path: tables
           storage: git
 
+    build-paper:
+      name:
+      kind: latex
+      environment: tex
+      wdir:
+      inputs: []
+      outputs: []
+      always_run: false
+      iterate_over:
+      description:
+      target_path: paper/main.tex
+      latexmkrc_path:
+      verbose: false
+      force: false
+      synctex: true
 notebooks:
   - path: notebooks/penguins.ipynb
     title: Penguins analysis
@@ -48,3 +67,15 @@ derived_from:
   project: calkit/example-analytics
   git_repo_url: https://github.com/calkit/example-analytics
   git_rev: 36bc3038c7638d96770e3eddcb44f930e2bec4bb
+publications:
+  - path: paper/main.pdf
+    title: The paper
+    description:
+    kind:
+    stage: build-paper
+    overleaf:
+      project_id: 54b68eff0ee71ad2767b704a
+      wdir: paper
+      sync_paths: []
+      push_paths: []
+      last_sync_commit:
