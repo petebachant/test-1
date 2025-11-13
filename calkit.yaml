@@ -76,6 +76,8 @@ publications:
     overleaf:
       project_id: 54b68eff0ee71ad2767b704a
       wdir: paper
-      sync_paths: []
+      sync_paths:
+        - main.tex
+        - figures
       push_paths: []
-      last_sync_commit:
+      last_sync_commit: 1ab2d8337393da3e8d8ed4754fc901ee723dca0a
