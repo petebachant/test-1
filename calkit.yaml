@@ -1,8 +1,8 @@
-owner: calkit
-name: example-analytics
-title: Analytics example
-description: An example project that does some analytics (data science).
-git_repo_url: https://github.com/calkit/example-analytics
+owner: petebachant
+name: test-1
+title: Test 1
+description: This is a test.
+git_repo_url: https://github.com/petebachant/test-1
 
 environments:
   main:
@@ -29,7 +29,8 @@ notebooks:
     description: >
       A modified version of Saswat Seth's penguins analysis notebook.
     imported_from:
-      url: https://www.kaggle.com/code/saswatsethda/penguins-data-analysis-and-modeling
+      url: 
+        https://www.kaggle.com/code/saswatsethda/penguins-data-analysis-and-modeling
     license:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0
@@ -43,3 +44,7 @@ datasets:
     notes: >
       CSV from
       https://github.com/INRIA/scikit-learn-mooc/blob/main/datasets/penguins.csv
+derived_from:
+  project: calkit/example-analytics
+  git_repo_url: https://github.com/calkit/example-analytics
+  git_rev: 36bc3038c7638d96770e3eddcb44f930e2bec4bb
