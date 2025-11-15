@@ -15,6 +15,9 @@ pipeline:
       kind: jupyter-notebook
       notebook_path: notebooks/main.ipynb
       environment: main
+      cleaned_ipynb_storage: null
+      executed_ipynb_storage: null
+      html_storage: git
       inputs:
         - data/raw/penguins.csv
       outputs:
@@ -22,7 +25,7 @@ pipeline:
           storage: git
         - path: tables
           storage: git
-        - path: results/main.json
+        - path: results/vif.json
           storage: git
 
 notebooks:
@@ -35,6 +38,13 @@ notebooks:
     license:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0
+
+figures:
+  - path: figures/pairplot.png
+    title: Pairplot of penguins data
+    description: >
+      A pairplot showing the relationships between the different features of
+      the penguins dataset.
 
 datasets:
   - path: data/raw/penguins.csv

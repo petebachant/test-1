@@ -1,0 +1,65 @@
+schema: '2.0'
+stages:
+  _check-env-main:
+    cmd: calkit check environment --name main
+    deps:
+    - path: pyproject.toml
+      hash: md5
+      md5: 6a628bfed7e164c845f3e638e2b2dc35
+      size: 383
+    outs:
+    - path: uv.lock
+      hash: md5
+      md5: 2279fd3dc518c2c475923e43d7c58340
+      size: 352777
+  _clean-nb-run-main-notebook:
+    cmd: calkit nb clean "notebooks/main.ipynb"
+    deps:
+    - path: notebooks/main.ipynb
+      hash: md5
+      md5: d3b582b6aefccf8b347d9bb34ace33ca
+      size: 686634
+    outs:
+    - path: .calkit/notebooks/cleaned/notebooks/main.ipynb
+      hash: md5
+      md5: d3b582b6aefccf8b347d9bb34ace33ca
+      size: 686634
+  run-main-notebook:
+    cmd: calkit nb execute --environment main --no-check --language python --to 
+      html "notebooks/main.ipynb"
+    deps:
+    - path: .calkit/notebooks/cleaned/notebooks/main.ipynb
+      hash: md5
+      md5: d3b582b6aefccf8b347d9bb34ace33ca
+      size: 686634
+    - path: data/raw/penguins.csv
+      hash: md5
+      md5: 15d47d23d10f2f2f842439a2abdb771d
+      size: 15010
+    - path: uv.lock
+      hash: md5
+      md5: 2279fd3dc518c2c475923e43d7c58340
+      size: 352777
+    outs:
+    - path: .calkit/notebooks/executed/notebooks/main.ipynb
+      hash: md5
+      md5: 9c8f75a8c9f943ba4f81091f09c621e7
+      size: 1872121
+    - path: .calkit/notebooks/html/notebooks/main.html
+      hash: md5
+      md5: aa67dc38c6fbf0c7a62d97796942cf1f
+      size: 2175697
+    - path: figures
+      hash: md5
+      md5: 7bd089176f2db1b6cb1c05126c081b5d.dir
+      size: 974317
+      nfiles: 3
+    - path: results/vif.json
+      hash: md5
+      md5: 11c75f0a1b2878ca2b6b03df414de3d7
+      size: 149
+    - path: tables
+      hash: md5
+      md5: d157619df0ef060108b58e42a8fcc8e3.dir
+      size: 964
+      nfiles: 1

@@ -33,12 +33,12 @@ stages:
       - tables:
           cache: false
           persist: false
-      - results/main.json:
+      - results/vif.json:
           cache: false
           persist: false
       - .calkit/notebooks/executed/notebooks/main.ipynb:
-          cache: true
+          cache: false
       - .calkit/notebooks/html/notebooks/main.html:
-          cache: true
+          cache: false
     desc: Automatically generated from the 'run-main-notebook' stage 
       in calkit.yaml. Changes made here will be overwritten.
