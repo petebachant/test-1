@@ -11,9 +11,9 @@ environments:
 
 pipeline:
   stages:
-    analyze-penguins:
+    run-main-notebook:
       kind: jupyter-notebook
-      notebook_path: notebooks/penguins.ipynb
+      notebook_path: notebooks/main.ipynb
       environment: main
       inputs:
         - data/raw/penguins.csv
@@ -24,8 +24,8 @@ pipeline:
           storage: git
 
 notebooks:
-  - path: notebooks/penguins.ipynb
-    title: Penguins analysis
+  - path: notebooks/main.ipynb
+    title: Main notebook
     description: >
       A modified version of Saswat Seth's penguins analysis notebook.
     imported_from:
