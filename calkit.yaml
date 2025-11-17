@@ -45,6 +45,15 @@ figures:
     description: >
       A pairplot showing the relationships between the different features of
       the penguins dataset.
+  - path: figures/regplot.png
+    title: Regplot of body mass versus bill length
+    description: >
+      A regression plot showing the relationship between body mass and bill
+      length.
+  - path: figures/residuals-histogram.png
+    title: Residuals histogram
+    description: >
+      A histogram of the residuals from the regression model.
 
 datasets:
   - path: data/raw/penguins.csv
