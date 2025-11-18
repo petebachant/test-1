@@ -1,8 +1,8 @@
-owner: calkit
-name: example-analytics
-title: Analytics example
-description: An example project that does some analytics (data science).
-git_repo_url: https://github.com/calkit/example-analytics
+owner: petebachant
+name: test-1
+title: Test 1
+description: This is test 1
+git_repo_url: https://github.com/petebachant/test-1
 
 environments:
   main:
@@ -15,8 +15,8 @@ pipeline:
       kind: jupyter-notebook
       notebook_path: notebooks/main.ipynb
       environment: main
-      cleaned_ipynb_storage: null
-      executed_ipynb_storage: null
+      cleaned_ipynb_storage:
+      executed_ipynb_storage:
       html_storage: git
       inputs:
         - data/raw/penguins.csv
@@ -34,7 +34,8 @@ notebooks:
     description: >
       A modified version of Saswat Seth's penguins analysis notebook.
     imported_from:
-      url: https://www.kaggle.com/code/saswatsethda/penguins-data-analysis-and-modeling
+      url: 
+        https://www.kaggle.com/code/saswatsethda/penguins-data-analysis-and-modeling
     license:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0
@@ -43,7 +44,8 @@ figures:
   - path: figures/pairplot.png
     title: Pairplot of penguins data
     description: >
-      A pairplot showing the relationships between the different features of
+      A pairplot showing the relationships between the different features
+      of
       the penguins dataset.
   - path: figures/regplot.png
     title: Regplot of body mass versus bill length
@@ -62,3 +64,7 @@ datasets:
       doi: 10.5281/zenodo.3960218
     license: CC0-1.0
     notes: Exported from Seaborn.
+derived_from:
+  project: calkit/example-analytics
+  git_repo_url: https://github.com/calkit/example-analytics
+  git_rev: a89110b060d1c92c66ec2d58bdb1d83b0d487186
