@@ -88,3 +88,7 @@ publications:
 overleaf_sync:
   paper:
     url: https://www.overleaf.com/project/68000059d42b134573cb2e35
+references:
+  - path: paper/references.bib
+    name: Main references
+    description: This is the primary bibliography.
