@@ -1,7 +1,7 @@
 stages:
   run-main-notebook:
-    cmd: calkit nb execute --environment main --no-check --language python
-      --to html "notebooks/main.ipynb"
+    cmd: calkit nb execute --environment main --no-check --language 
+      python --to html "notebooks/main.ipynb"
     deps:
       - .calkit/notebooks/cleaned/notebooks/main.ipynb
       - data/raw/penguins.csv
@@ -18,10 +18,10 @@ stages:
           persist: false
       - .calkit/notebooks/html/notebooks/main.html:
           cache: false
-    desc: Automatically generated from the 'run-main-notebook' stage in
-      calkit.yaml. Changes made here will be overwritten.
+    desc: Automatically generated from the 'run-main-notebook' stage 
+      in calkit.yaml. Changes made here will be overwritten.
   build-paper:
-    cmd: calkit latexmk -e tex --no-check paper/paper.tex
+    cmd: calkit latex build -e tex --no-check paper/paper.tex
     deps:
       - paper/paper.tex
       - paper/references.bib
@@ -29,5 +29,5 @@ stages:
       - .calkit/env-locks/tex
     outs:
       - paper/paper.pdf
-    desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
-      Changes made here will be overwritten.
+    desc: Automatically generated from the 'build-paper' stage in 
+      calkit.yaml. Changes made here will be overwritten.

@@ -1,0 +1,63 @@
+schema: '2.0'
+stages:
+  run-main-notebook:
+    cmd: calkit nb execute --environment main --no-check --language python --to 
+      html "notebooks/main.ipynb"
+    deps:
+    - path: .calkit/notebooks/cleaned/notebooks/main.ipynb
+      hash: md5
+      md5: 6ac1c2a0dd045a792943472a2e1f0b42
+      size: 653983
+    - path: data/raw/penguins.csv
+      hash: md5
+      md5: 15d47d23d10f2f2f842439a2abdb771d
+      size: 15010
+    - path: uv.lock
+      hash: md5
+      md5: 2279fd3dc518c2c475923e43d7c58340
+      size: 352777
+    outs:
+    - path: .calkit/notebooks/html/notebooks/main.html
+      hash: md5
+      md5: e6f202e0b986f4fc8e069b59e787a6bd
+      size: 2287490
+    - path: figures
+      hash: md5
+      md5: 92cd7664dc59b95096d9dffbdfb9729c.dir
+      size: 1060474
+      nfiles: 3
+    - path: results/vif.json
+      hash: md5
+      md5: 752f8ea70cb3caacdeae2f1f5a24f677
+      size: 160
+    - path: tables
+      hash: md5
+      md5: f2258c7046617371a0f55d0f34f9bace.dir
+      size: 964
+      nfiles: 1
+  build-paper:
+    cmd: calkit latex build -e tex --no-check paper/paper.tex
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: 75d04c1cc536dcb0c7bd367750eff665.dir
+      size: 1171
+      nfiles: 1
+    - path: paper/figures
+      hash: md5
+      md5: 1249612e9d824d8d123bdaf1af931ac2.dir
+      size: 43959
+      nfiles: 1
+    - path: paper/paper.tex
+      hash: md5
+      md5: f40f9d9f3118cd4081e3bad9903822be
+      size: 912
+    - path: paper/references.bib
+      hash: md5
+      md5: 2fc1994a416f2c333bb576ad351f0fce
+      size: 5856
+    outs:
+    - path: paper/paper.pdf
+      hash: md5
+      md5: e7bb549e6c380ed0e9903d57533b5317
+      size: 113608
