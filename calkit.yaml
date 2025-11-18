@@ -70,19 +70,21 @@ figures:
 datasets:
   - path: data/raw/penguins.csv
     title: Palmer's penguins
-    imported_from:
-      doi: 10.5281/zenodo.3960218
+    imported_from: 10.5281/zenodo.3960218
     license: CC0-1.0
     notes: Exported from Seaborn.
+
 derived_from:
   project: calkit/example-analytics
   git_repo_url: https://github.com/calkit/example-analytics
   git_rev: a89110b060d1c92c66ec2d58bdb1d83b0d487186
+
 publications:
   - path: paper/paper.pdf
     title: This paper is synced with Overleaf
     description:
     stage: build-paper
+
 overleaf_sync:
   paper:
     url: https://www.overleaf.com/project/68000059d42b134573cb2e35
