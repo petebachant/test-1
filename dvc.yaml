@@ -45,6 +45,21 @@ stages:
           persist: true
     desc: Automatically generated from the 'map-paths' stage in 
       calkit.yaml. Changes made here will be overwritten.
+  results-to-latex:
+    cmd: "calkit latex from-json 'results/vif.json' --output 'paper/results.tex'
+      --output 'pubs/conf-paper-1/results.tex' --format-json '{\"super_cool_result\"\
+      : \"{bill_length_mm:.2f}\"}'"
+    deps:
+      - results/vif.json
+    outs:
+      - paper/results.tex:
+          cache: false
+          persist: false
+      - pubs/conf-paper-1/results.tex:
+          cache: false
+          persist: false
+    desc: Automatically generated from the 'results-to-latex' stage in
+      calkit.yaml. Changes made here will be overwritten.
   build-paper:
     cmd: calkit latex build -e tex --no-check paper/paper.tex
     deps:

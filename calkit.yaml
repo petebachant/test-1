@@ -45,6 +45,15 @@ pipeline:
         - src: tables
           dest: pubs/conf-paper-1/tables
           kind: dir-to-dir-replace
+    results-to-latex:
+      kind: json-to-latex
+      inputs:
+        - results/vif.json
+      outputs: 
+        - paper/results.tex
+        - pubs/conf-paper-1/results.tex
+      format:
+        super_cool_result: "{bill_length_mm:.2f}"
     build-paper:
       kind: latex
       target_path: paper/paper.tex
@@ -68,8 +77,7 @@ notebooks:
     description: >
       A modified version of Saswat Seth's penguins analysis notebook.
     imported_from:
-      url: 
-        https://www.kaggle.com/code/saswatsethda/penguins-data-analysis-and-modeling
+      url: https://www.kaggle.com/code/saswatsethda/penguins-data-analysis-and-modeling
     license:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0
