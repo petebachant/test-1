@@ -61,3 +61,38 @@ stages:
       hash: md5
       md5: 4a44f40f07e4681f1e286fa345fce815
       size: 113297
+  build-pubs/conf-paper-1:
+    cmd: calkit latex build -e tex --no-check pubs/conf-paper-1/main.tex
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: 74d25e907b21e3ff64a91b36220aa492.dir
+      size: 2342
+      nfiles: 2
+    - path: pubs/conf-paper-1/figures
+      hash: md5
+      md5: 1907bcd2d831e01ccc227a116430932d.dir
+      size: 1060187
+      nfiles: 3
+    - path: pubs/conf-paper-1/main.tex
+      hash: md5
+      md5: de3ea80d0714f79a864be699774e983d
+      size: 1141
+    - path: pubs/conf-paper-1/references.bib
+      hash: md5
+      md5: 2fc1994a416f2c333bb576ad351f0fce
+      size: 5856
+    - path: pubs/conf-paper-1/results.tex
+      hash: md5
+      md5: d227bd082edb72e80d699f07f1d6905e
+      size: 602
+    - path: pubs/conf-paper-1/tables
+      hash: md5
+      md5: 6fd658bbac3b089c91fc1165b57f3a29.dir
+      size: 964
+      nfiles: 1
+    outs:
+    - path: pubs/conf-paper-1/main.pdf
+      hash: md5
+      md5: 217e8fe4c1c07eaa3ca6127cc3b24fd8
+      size: 540220
