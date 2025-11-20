@@ -38,6 +38,15 @@ pipeline:
       inputs:
         - paper/references.bib
         - paper/figures
+    build-pubs/conf-paper-1:
+      kind: latex
+      target_path: pubs/conf-paper-1/main.tex
+      environment: tex
+      inputs:
+        - pubs/conf-paper-1/tables
+        - pubs/conf-paper-1/references.bib
+        - pubs/conf-paper-1/results.tex
+        - pubs/conf-paper-1/figures
 notebooks:
   - path: notebooks/main.ipynb
     title: Main notebook
@@ -85,9 +94,15 @@ publications:
     description:
     stage: build-paper
 
+  - path: pubs/conf-paper-1/main.pdf
+    title: This is a paper about the analysis
+    description:
+    stage: build-pubs/conf-paper-1
 overleaf_sync:
   paper:
     url: https://www.overleaf.com/project/68000059d42b134573cb2e35
+  pubs/conf-paper-1:
+    url: https://www.overleaf.com/project/691ca2644997ebdd1a3590bd
 references:
   - path: paper/references.bib
     name: Main references

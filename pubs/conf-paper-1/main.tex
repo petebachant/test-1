@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+
+\usepackage{sectsty}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\title{This is a paper about the analysis}
+\author{The Author}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\input{results.tex}
+
+% Optional TOC
+% \tableofcontents
+% \pagebreak
+
+%--Paper--
+
+\section{Data exploration}
+
+In figure \ref{fig:placeholder},
+we can see a pair plot of the variables in the dataset.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/pairplot.png}
+    \caption{A pair plot of the variables in the dataset.}
+    \label{fig:placeholder}
+\end{figure}
+
+\section{Linear regression}
+
+In table \ref{tab:ols-summary} we can see the OLS summary.
+
+\begin{table}[]
+    \centering
+    \input{tables/ols-summary}
+    \caption{This is the OLS summary.}
+    \label{tab:ols-summary}
+\end{table}
+
+\section{Conclusions}
+
+The conclusions are consistent with Abramowitz
+and Stegun \cite{AbramowitzStegun1970}.
+
+%--/Paper--
+
+\bibliography{references}
+\bibliographystyle{plain}
+
+\end{document}
