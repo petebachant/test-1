@@ -211,3 +211,19 @@ __marimo__/
 .calkit/notebooks/executed/notebooks/main.ipynb
 
 .calkit/overleaf/
+
+paper/tables
+
+pubs/conf-paper-1/tables
+
+paper/figures/regplot.png
+
+paper/figures/pairplot.png
+
+paper/figures/residuals-histogram.png
+
+pubs/conf-paper-1/figures/regplot.png
+
+pubs/conf-paper-1/figures/pairplot.png
+
+pubs/conf-paper-1/figures/residuals-histogram.png
