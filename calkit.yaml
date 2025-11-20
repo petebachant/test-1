@@ -8,10 +8,10 @@ environments:
   main:
     kind: uv
     path: pyproject.toml
-
   tex:
     kind: docker
     image: texlive/texlive:latest-full
+
 pipeline:
   stages:
     run-main-notebook:
