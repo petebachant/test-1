@@ -31,7 +31,7 @@ stages:
       - paper/paper.pdf
     desc: Automatically generated from the 'build-paper' stage in 
       calkit.yaml. Changes made here will be overwritten.
-  build-pubs/conf-paper-1:
+  build-conf-paper-1:
     cmd: calkit latex build -e tex --no-check 
       pubs/conf-paper-1/main.tex
     deps:
@@ -43,5 +43,5 @@ stages:
       - .calkit/env-locks/tex
     outs:
       - pubs/conf-paper-1/main.pdf
-    desc: Automatically generated from the 'build-pubs/conf-paper-1' 
-      stage in calkit.yaml. Changes made here will be overwritten.
+    desc: Automatically generated from the 'build-conf-paper-1' stage 
+      in calkit.yaml. Changes made here will be overwritten.

@@ -30,7 +30,6 @@ pipeline:
           storage: git
         - path: results/vif.json
           storage: git
-
     build-paper:
       kind: latex
       target_path: paper/paper.tex
@@ -38,7 +37,7 @@ pipeline:
       inputs:
         - paper/references.bib
         - paper/figures
-    build-pubs/conf-paper-1:
+    build-conf-paper-1:
       kind: latex
       target_path: pubs/conf-paper-1/main.tex
       environment: tex
@@ -47,6 +46,7 @@ pipeline:
         - pubs/conf-paper-1/references.bib
         - pubs/conf-paper-1/results.tex
         - pubs/conf-paper-1/figures
+
 notebooks:
   - path: notebooks/main.ipynb
     title: Main notebook
