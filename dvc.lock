@@ -129,7 +129,7 @@ stages:
     outs:
     - path: pubs/conf-paper-1/main.pdf
       hash: md5
-      md5: b4aec17ccfd10e185edaf0773fc3d610
+      md5: 5317994bb3ee1cc753e91f81d187aa4c
       size: 540398
   map-paths:
     cmd: calkit map-paths --dir-to-dir-merge 'figures->paper/figures' 
