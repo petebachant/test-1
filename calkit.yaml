@@ -116,16 +116,17 @@ publications:
     title: This paper is synced with Overleaf
     description:
     stage: build-paper
-
   - path: pubs/conf-paper-1/main.pdf
     title: This is a paper about the analysis
     description:
     stage: build-pubs/conf-paper-1
+
 overleaf_sync:
   paper:
     url: https://www.overleaf.com/project/68000059d42b134573cb2e35
   pubs/conf-paper-1:
     url: https://www.overleaf.com/project/691ca2644997ebdd1a3590bd
+
 references:
   - path: paper/references.bib
     name: Main references
