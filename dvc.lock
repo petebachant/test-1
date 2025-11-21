@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   run-main-notebook:
-    cmd: calkit nb execute --environment main --no-check --language python --to 
+    cmd: calkit nb execute --environment main --no-check --language python --to
       html "notebooks/main.ipynb"
     deps:
     - path: .calkit/notebooks/cleaned/notebooks/main.ipynb
@@ -132,9 +132,9 @@ stages:
       md5: 8694cbf5bb697b4677a16683a2e33325
       size: 540535
   map-paths:
-    cmd: calkit map-paths --dir-to-dir-merge 'figures->paper/figures' 
-      --dir-to-dir-merge 'figures->pubs/conf-paper-1/figures' 
-      --dir-to-dir-replace 'tables->paper/tables' --dir-to-dir-replace 
+    cmd: calkit map-paths --dir-to-dir-merge 'figures->paper/figures'
+      --dir-to-dir-merge 'figures->pubs/conf-paper-1/figures'
+      --dir-to-dir-replace 'tables->paper/tables' --dir-to-dir-replace
       'tables->pubs/conf-paper-1/tables'
     deps:
     - path: figures
