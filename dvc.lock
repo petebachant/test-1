@@ -111,8 +111,8 @@ stages:
       nfiles: 3
     - path: pubs/conf-paper-1/main.tex
       hash: md5
-      md5: 1bbe3deb068571b95dfa932d2b31403e
-      size: 1216
+      md5: c5e73559723c48b443ed985ac455dec5
+      size: 1190
     - path: pubs/conf-paper-1/references.bib
       hash: md5
       md5: 2fc1994a416f2c333bb576ad351f0fce
@@ -129,8 +129,8 @@ stages:
     outs:
     - path: pubs/conf-paper-1/main.pdf
       hash: md5
-      md5: 5317994bb3ee1cc753e91f81d187aa4c
-      size: 540398
+      md5: 5e06285a9bda67440e50cc9bada7d1b0
+      size: 540535
   map-paths:
     cmd: calkit map-paths --dir-to-dir-merge 'figures->paper/figures' 
       --dir-to-dir-merge 'figures->pubs/conf-paper-1/figures' 
