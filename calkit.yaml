@@ -3,3 +3,21 @@ name: test-1
 title: Test 1
 description: ''
 git_repo_url: https://github.com/petebachant/test-1
+environments:
+  tex:
+    kind: docker
+    image: texlive/texlive:latest-full
+pipeline:
+  stages:
+    build-paper:
+      kind: latex
+      target_path: paper/main.tex
+      environment: tex
+      inputs:
+        - paper/figures
+publications:
+  - path: paper/main.pdf
+    title: A paper about things
+    description:
+    kind: journal-article
+    stage: build-paper

@@ -1,0 +1,11 @@
+stages:
+  build-paper:
+    cmd: calkit latex build -e tex --no-check paper/main.tex
+    deps:
+      - paper/main.tex
+      - paper/figures
+      - .calkit/env-locks/tex
+    outs:
+      - paper/main.pdf
+    desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
+      Changes made here will be overwritten.
