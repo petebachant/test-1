@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  build-paper:
+    cmd: calkit latex build -e tex --no-check paper/main.tex
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: 6f74718090eae3a4e2c493bd749b213f.dir
+      size: 1171
+      nfiles: 1
+    - path: paper/figures
+      hash: md5
+      md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
+      size: 18125
+      nfiles: 1
+    - path: paper/main.tex
+      hash: md5
+      md5: 953c8d8e394aa15b324b8fd5ba0151b4
+      size: 589
+    outs:
+    - path: paper/main.pdf
+      hash: md5
+      md5: 0f92b694b8a881b5d4d3ff48cfa7c9f6
+      size: 83997
