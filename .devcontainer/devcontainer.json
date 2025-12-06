@@ -41,9 +41,11 @@
       }
     }
   },
+  "initializeCommand": "bash -c 'echo \"CALKIT_TOKEN=$(calkit config get token)\" > .env.temp' && bash -c 'echo \"CALKIT_DVC_TOKEN=$(calkit config get dvc_token)\" >> .env.temp'",
   "mounts": [
     "source=${localEnv:HOME}/.calkit,target=/home/vscode/.calkit,type=bind,consistency=cached"
   ],
+  "postCreateCommand": "bash -c 'source .env.temp && echo \"export CALKIT_TOKEN=\\\"$CALKIT_TOKEN\\\"\" >> ~/.bashrc && echo \"export CALKIT_DVC_TOKEN=\\\"$CALKIT_DVC_TOKEN\\\"\" >> ~/.bashrc && rm -f .env.temp'",
   "updateContentCommand": "while ! docker info > /dev/null 2>&1; do sleep 1; done && conda init bash && . /opt/conda/bin/activate && calkit check envs",
   "postStartCommand": ". /opt/conda/bin/activate; mkdir -p $HOME/.cache; calkit config github-codespace > $HOME/.cache/calkit-config.log 2>&1 || true; calkit pull > $HOME/.cache/calkit-pull.log 2>&1 || true"
 }

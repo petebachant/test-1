@@ -5,7 +5,7 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: 70ddd01f9f204395483f99113d55b45a.dir
+      md5: 92ec3ac17ea825ece0a7d83c8d16d317.dir
       size: 2342
       nfiles: 2
     - path: paper/figures
@@ -15,10 +15,10 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: d10e90efd19aa4d8c47d406f8f68f9d9
-      size: 629
+      md5: 953c8d8e394aa15b324b8fd5ba0151b4
+      size: 589
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: 87d5145c6a4cee6b9cfc2c883dd498aa
-      size: 84393
+      md5: 89c25842ecc19ae83b62928b87d6825c
+      size: 83997
