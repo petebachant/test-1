@@ -6,6 +6,7 @@ stages:
       - paper/figures
       - .calkit/env-locks/tex
     outs:
-      - paper/main.pdf
-    desc: Automatically generated from the 'build-paper' stage in 
-      calkit.yaml. Changes made here will be overwritten.
+      - paper/main.pdf:
+          cache: true
+    desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
+      Changes made here will be overwritten.
