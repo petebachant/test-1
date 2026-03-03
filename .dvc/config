@@ -2,4 +2,5 @@
     autostage = true
     remote = calkit-staging
 ['remote "calkit-staging"']
-    url = ck://petebachant/test-1
+    url = https://api.staging.calkit.io/projects/petebachant/test-1/dvc
+    auth = custom
