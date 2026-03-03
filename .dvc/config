@@ -1,5 +1,5 @@
 [core]
     autostage = true
     remote = calkit
-['remote "calkit-staging"']
+['remote "calkit"']
     url = ck://petebachant/test-1
