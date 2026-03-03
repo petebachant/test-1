@@ -2,4 +2,4 @@
     autostage = true
     remote = calkit-staging
 ['remote "calkit-staging"']
-    url = "ck://petebachant/test-1"
+    url = ck://petebachant/test-1
