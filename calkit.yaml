@@ -1,12 +1,13 @@
 owner: petebachant
 name: test-1
 title: Test 1
-description: ''
+description: ""
 git_repo_url: https://github.com/petebachant/test-1
 environments:
   tex:
     kind: docker
     image: texlive/texlive:latest-full
+
 pipeline:
   stages:
     build-paper:
@@ -15,9 +16,13 @@ pipeline:
       environment: tex
       inputs:
         - paper/figures
+
 publications:
   - path: paper/main.pdf
     title: A paper about things
     description:
     kind: journal-article
     stage: build-paper
+
+showcase:
+  - publication: paper/main.pdf
