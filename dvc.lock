@@ -20,5 +20,5 @@ stages:
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: faae03c5275f83fa9c72cf2848c2a2e7
+      md5: f8159fe9ca1e95c361dd3158db029543
       size: 84516
