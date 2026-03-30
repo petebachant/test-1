@@ -54,3 +54,6 @@ publications:
 
 showcase:
   - publication: paper/main.pdf
+notebooks:
+  - path: notebook.ipynb
+    environment: py
