@@ -1,0 +1,54 @@
+{
+    "RepoTags": [
+        "quay.io/jupyter/scipy-notebook:2025-12-31"
+    ],
+    "RepoDigests": [
+        "quay.io/jupyter/scipy-notebook@sha256:aebf73afaf983124e075904ec7856c4b511d0415d1275835a6f08704422ece9e"
+    ],
+    "Architecture": "arm64",
+    "Os": "linux",
+    "RootFS": {
+        "Type": "layers",
+        "Layers": [
+            "sha256:a8777d7885428f109ae6a59eec92d9aad13dd105afe5c44aadc1fcad90550610",
+            "sha256:882c612532e228720dc2293a62ffe1bd7735e8246047bf91ca97daf71b328953",
+            "sha256:cbc8ee642722121a74c4d9e35e8496f1895fd4cf00d07532453f4075c2831745",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:c5e320bd3758862e84007e0db74750a3ae8a02fb6dc4ab044f55922a65fe3bd9",
+            "sha256:9483b53b72e2bbc6f01ee641c72e81820bb8726159a0719c9f9fbb9d95e5165e",
+            "sha256:bdf355a6fa4bc09ab4c9101b915a20bcf1b8e296657acf6d5cb4bcc3a7bcd060",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:77d7a4734bcaadb30b6ba47369e599b3130759d1369e48d3b03717d7d9aa7a55",
+            "sha256:3cd69b6765025150d33cd337fbf8fe510e6e3002d48d372b4ce8e261ec63081d",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:f0f532cd9e386acad6ab91dd51ad5076e9d12a567641fc54a8c32db9eca5d75a",
+            "sha256:c6bcfd55d31f5234a9aa3d6541abc2168117ba46adcb1a853626726a3e5aab27",
+            "sha256:367ea6cad6a36ddcaf0fd185238ff5063ac0c705aae6a50fc8af1fcf888f016d",
+            "sha256:489df4d8fba37cbb5a9f604cfceb0e7a8ab119d13fd2630aebb00efa0b07faaa",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:4217add1d44ca0ca380d6588dba3688febe9eaad09a6dfa7e2d8b66d49966a34",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:b974043ef7bf35a220d4b282680c490197b7fb01b002b838f7f780855da617fc",
+            "sha256:094b8479a90f335b38629b1f43b632d283c76b5f23122e50209069f21d5b2725",
+            "sha256:73878c9a976361226259befbd62ab88da3bbfc2152df040dbcc4d53d051cf34b",
+            "sha256:cb335d10ee286ead4d8177df33374a711e146c753bca3ecb6cf0c28afb2fdb64",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:7de5d6f26291069d6ee41bf8c745e0c97d6f35ba59b19a17061f24740fbdd8a9",
+            "sha256:cec924a5096121801b5f8a46a9213a70116e542c119222b05363820e37339a23",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:7437d8f69e4557ff38151f46763d019540d2303a6e159a5939e5183d49282939",
+            "sha256:75548d23abc6a7b7bf194cd47f76747c8928f25372a7c9306fc6dcfd3970b8bb",
+            "sha256:abca2140ded5387f21ddb4bc1eff7ba031c04b804bc1ccc32aa64b048b3cafae",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:cf1bed66bbf8c09ef5f9402ac91a871d2dc944cb2a221707ec446ab2e4a6d41e",
+            "sha256:a15552b4ffa2b33ac4d9843ac249c5e5d91fa3c270a0e6e38896c1950cb7d3df",
+            "sha256:9598e7e5ced8c272dd946727becb6ae50278a228de0b47cc0b56f6332f5a62a0",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+        ]
+    },
+    "DockerfileMD5": null,
+    "DepsMD5s": {}
+}

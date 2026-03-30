@@ -3,10 +3,38 @@ name: test-1
 title: Test 1
 description: ""
 git_repo_url: https://github.com/petebachant/test-1
+
+# If desired, storage options can be changed here
+# Maybe we want the ability to have certain paths go to certain storage
+# backends, and we need to track versions
+storage:
+  dvc:
+    # If using the ck remote scheme, you can define what storage backend to
+    # use with it
+    kind: calkit-cloud # default -- can also be google-drive
+  # If we're managing certain files in git lfs
+  git-lfs:
+    kind: hugging-face
+    repo_url: petebachant/test-1-lfs
+
 environments:
   tex:
     kind: docker
     image: texlive/texlive:latest-full
+  py:
+    kind: uv
+    path: .calkit/envs/py/pyproject.toml
+  cluster:
+    kind: slurm
+    partition: gpu
+    host: sup.lol.edu
+  j1:
+    kind: julia
+    path: Project.toml
+    julia: "1.12"
+  jupydocker:
+    kind: docker
+    image: quay.io/jupyter/scipy-notebook:2025-12-31
 
 pipeline:
   stages:
