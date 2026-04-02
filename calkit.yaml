@@ -54,5 +54,10 @@ publications:
 
 showcase:
   - publication: paper/main.pdf
+
 questions:
   - What's up?
+
+notebooks:
+  - path: notebook.ipynb
+    environment: py
