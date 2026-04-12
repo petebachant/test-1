@@ -58,6 +58,7 @@ showcase:
 questions:
   - What's up?
 
+  - This is another question?
 notebooks:
   - path: notebook.ipynb
     environment: py
