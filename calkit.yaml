@@ -45,6 +45,13 @@ pipeline:
       inputs:
         - paper/figures
 
+    build-paper2:
+      kind: latex
+      target_path: paper2/main.tex
+      environment: tex
+      inputs:
+        - paper2/thing.txt
+        - paper2/figures
 publications:
   - path: paper/main.pdf
     title: A paper about things
@@ -52,6 +59,11 @@ publications:
     kind: journal-article
     stage: build-paper
 
+  - path: paper2/main.pdf
+    title: A paper about things
+    description:
+    kind: report
+    stage: build-paper2
 showcase:
   - publication: paper/main.pdf
 
@@ -62,3 +74,6 @@ questions:
 notebooks:
   - path: notebook.ipynb
     environment: py
+overleaf_sync:
+  paper2:
+    url: https://www.overleaf.com/project/54b68eff0ee71ad2767b704a
