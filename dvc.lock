@@ -22,3 +22,55 @@ stages:
       hash: md5
       md5: 553e2a7f5d637439274231323ceab037
       size: 84664
+  build-paper2:
+    cmd: calkit latex build -e tex --no-check paper2/main.tex
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: 1c4cccf8b7888ff3ada7a423059c5b14.dir
+      size: 2295
+      nfiles: 2
+    - path: paper2/figures
+      hash: md5
+      md5: 82323be8c73b39eb98695ce12317e066.dir
+      size: 18129
+      nfiles: 5
+    - path: paper2/main.tex
+      hash: md5
+      md5: 7d972cf0baea218aec5ab4425056a16b
+      size: 605
+    - path: paper2/thing.txt
+      hash: md5
+      md5: b130eeb413db6d877a36b1804252ff59
+      size: 20
+    outs:
+    - path: paper2/main.pdf
+      hash: md5
+      md5: 56fa30272d3a475802371b6ebbc71013
+      size: 83915
+  build-report:
+    cmd: calkit latex build -e tex --no-check report/main.tex
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: 1c4cccf8b7888ff3ada7a423059c5b14.dir
+      size: 2295
+      nfiles: 2
+    - path: report/figures
+      hash: md5
+      md5: ebc7b7f1c73d61b982965129c29a4ad2.dir
+      size: 1593263
+      nfiles: 9
+    - path: report/main.tex
+      hash: md5
+      md5: 7328295754f17b089cff276e49df0da6
+      size: 4574
+    - path: report/references.bib
+      hash: md5
+      md5: 2e34cc5029dfe127b9ebff51205e4978
+      size: 1213
+    outs:
+    - path: report/main.pdf
+      hash: md5
+      md5: c971cf32b2a83e044b272511e7b1c2a8
+      size: 1310433

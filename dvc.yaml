@@ -6,8 +6,7 @@ stages:
       - paper/figures
       - .calkit/env-locks/tex
     outs:
-      - paper/main.pdf:
-          cache: true
+      - paper/main.pdf
     desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
       Changes made here will be overwritten.
   build-paper2:
@@ -18,8 +17,7 @@ stages:
       - paper2/figures
       - .calkit/env-locks/tex
     outs:
-      - paper2/main.pdf:
-          cache: true
+      - paper2/main.pdf
     desc: Automatically generated from the 'build-paper2' stage in calkit.yaml.
       Changes made here will be overwritten.
   build-report:
@@ -30,7 +28,6 @@ stages:
       - report/figures
       - .calkit/env-locks/tex
     outs:
-      - report/main.pdf:
-          cache: true
+      - report/main.pdf
     desc: Automatically generated from the 'build-report' stage in calkit.yaml.
       Changes made here will be overwritten.
