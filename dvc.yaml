@@ -22,3 +22,15 @@ stages:
           cache: true
     desc: Automatically generated from the 'build-paper2' stage in calkit.yaml.
       Changes made here will be overwritten.
+  build-report:
+    cmd: calkit latex build -e tex --no-check report/main.tex
+    deps:
+      - report/main.tex
+      - report/references.bib
+      - report/figures
+      - .calkit/env-locks/tex
+    outs:
+      - report/main.pdf:
+          cache: true
+    desc: Automatically generated from the 'build-report' stage in calkit.yaml.
+      Changes made here will be overwritten.

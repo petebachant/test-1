@@ -52,6 +52,13 @@ pipeline:
       inputs:
         - paper2/thing.txt
         - paper2/figures
+    build-report:
+      kind: latex
+      target_path: report/main.tex
+      environment: tex
+      inputs:
+        - report/references.bib
+        - report/figures
 publications:
   - path: paper/main.pdf
     title: A paper about things
@@ -64,6 +71,12 @@ publications:
     description:
     kind: report
     stage: build-paper2
+  - path: report/main.pdf
+    title: A Simple Workflow for Processing and Visualizing Experimental
+      Data
+    description:
+    kind: report
+    stage: build-report
 showcase:
   - publication: paper/main.pdf
 
@@ -77,3 +90,5 @@ notebooks:
 overleaf_sync:
   paper2:
     url: https://www.overleaf.com/project/54b68eff0ee71ad2767b704a
+  report:
+    url: https://www.overleaf.com/project/699f2a0fb20a38960a52bc26
