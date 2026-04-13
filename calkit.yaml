@@ -85,6 +85,7 @@ questions:
 
   - This is another question?
   - Will this update my full name?
+  - Can I still add a question?
 notebooks:
   - path: notebook.ipynb
     environment: py
