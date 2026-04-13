@@ -84,6 +84,7 @@ questions:
   - What's up?
 
   - This is another question?
+  - Will this update my full name?
 notebooks:
   - path: notebook.ipynb
     environment: py
