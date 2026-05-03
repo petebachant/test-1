@@ -133,8 +133,8 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebooks/conda-polars.ipynb
       hash: md5
-      md5: 5080cd1d0366b393af6b1ad2d70ac48e
-      size: 2691
+      md5: bf702470bd47675cc7560cb27679a536
+      size: 2692
     - path: .calkit/notebooks/html/notebooks/conda-polars.html
       hash: md5
       md5: 8570602bf5e05e141d767333f989c93a

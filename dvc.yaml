@@ -64,9 +64,7 @@ stages:
       - .calkit/env-locks/conda-polars
     outs:
       - notebooks/data.avro
-      - notebooks/data.parquet:
-          cache: false
-          persist: false
+      - notebooks/data.parquet
       - .calkit/notebooks/executed/notebooks/conda-polars.ipynb:
           cache: false
       - .calkit/notebooks/html/notebooks/conda-polars.html:

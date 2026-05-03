@@ -75,8 +75,7 @@ pipeline:
       environment: conda-polars
       outputs:
         - notebooks/data.avro
-        - path: notebooks/data.parquet
-          storage: git
+        - notebooks/data.parquet
     notebooks-other:
       kind: jupyter-notebook
       notebook_path: notebooks/other.ipynb
