@@ -209,3 +209,9 @@ __marimo__/
 .calkit/overleaf/
 
 .calkit/notebooks/cleaned/notebook.ipynb
+
+.calkit/notebooks/cleaned/notebook-julia.ipynb
+
+.calkit/notebooks/cleaned/notebooks/conda-polars.ipynb
+
+.calkit/notebooks/cleaned/notebooks/other.ipynb

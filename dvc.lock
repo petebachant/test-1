@@ -15,13 +15,13 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: ea9d25a6bbf905f9b1b8969a3cf481d6
-      size: 633
+      md5: 7f7383ac94863dcae7a4c127e452000a
+      size: 639
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: 553e2a7f5d637439274231323ceab037
-      size: 84664
+      md5: 3be93745bbb9f18c9798c8e0e1a93560
+      size: 84903
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
@@ -83,18 +83,91 @@ stages:
       size: 181801
     - path: .calkit/notebooks/cleaned/notebook.ipynb
       hash: md5
-      md5: ca2aee1dbfa2de5811b043e2b91055f3
+      md5: 140606fb5945724d0dc5666d6d6e8128
       size: 638
     outs:
     - path: .calkit/notebooks/executed/notebook.ipynb
       hash: md5
-      md5: 4735cbe85ccef27cf242e04167b7c198
-      size: 21819
+      md5: 108a726d7d7034bc8775e5f0edc93d97
+      size: 23819
     - path: .calkit/notebooks/html/notebook.html
       hash: md5
-      md5: 5e94f69de9ffbc8bd9e31556f07f4c5e
-      size: 290997
+      md5: 9b808d31a2047a77d85563f1e64242c3
+      size: 292997
     - path: figures/test.png
       hash: md5
-      md5: 773ba775081ad591034e0f521ab0152a
-      size: 15109
+      md5: 2d9d86da95ae09a484b6087a36ea872d
+      size: 16635
+  notebook-julia:
+    cmd: calkit nb execute --environment j1 --no-check --to html "notebook-julia.ipynb"
+    deps:
+    - path: .calkit/notebooks/cleaned/notebook-julia.ipynb
+      hash: md5
+      md5: 38adf0847d05094166a53449dfb75f4b
+      size: 636
+    - path: Manifest.toml
+      hash: md5
+      md5: e4df3b0cb7ffd4fe006664e184936a12
+      size: 7192
+    outs:
+    - path: .calkit/notebooks/executed/notebook-julia.ipynb
+      hash: md5
+      md5: 01f4f5f4273a5553774c001a2fa0669b
+      size: 3684
+    - path: .calkit/notebooks/html/notebook-julia.html
+      hash: md5
+      md5: 11e9762bb940930e3549f87c1f3ab5f5
+      size: 272514
+  notebooks-conda-polars:
+    cmd: calkit nb execute --environment conda-polars --no-check --to html "notebooks/conda-polars.ipynb"
+    deps:
+    - path: .calkit/env-locks/conda-polars
+      hash: md5
+      md5: af72db83a8d03902d4f2a2d1af5f57ef.dir
+      size: 4434
+      nfiles: 1
+    - path: .calkit/notebooks/cleaned/notebooks/conda-polars.ipynb
+      hash: md5
+      md5: 83ccfea5a118fe6439a9a56a0d148f1e
+      size: 688
+    outs:
+    - path: .calkit/notebooks/executed/notebooks/conda-polars.ipynb
+      hash: md5
+      md5: 5080cd1d0366b393af6b1ad2d70ac48e
+      size: 2691
+    - path: .calkit/notebooks/html/notebooks/conda-polars.html
+      hash: md5
+      md5: 8570602bf5e05e141d767333f989c93a
+      size: 271944
+    - path: notebooks/data.avro
+      hash: md5
+      md5: 032a7bd7dd788aaaf0aa2715139b201b
+      size: 176
+    - path: notebooks/data.parquet
+      hash: md5
+      md5: 7060825cab8b94fe8130cb1192d7581d
+      size: 850
+  notebooks-other:
+    cmd: calkit nb execute --environment py --no-check --to html "notebooks/other.ipynb"
+    deps:
+    - path: .calkit/envs/py/uv.lock
+      hash: md5
+      md5: 35f7e51eaae7411e9e32efa203332092
+      size: 181801
+    - path: .calkit/notebooks/cleaned/notebooks/other.ipynb
+      hash: md5
+      md5: 05e88b9a671bf1277150356d6e4cc997
+      size: 763
+    outs:
+    - path: .calkit/notebooks/executed/notebooks/other.ipynb
+      hash: md5
+      md5: 35ad9baa2aa7fc736dfc9d1237e11378
+      size: 2744
+    - path: .calkit/notebooks/html/notebooks/other.html
+      hash: md5
+      md5: fef655c1722a2f7aeebebbc0d5e06981
+      size: 272170
+    - path: results/sup.json
+      hash: md5
+      md5: 42b7b4f2921788ea14dac5566e6f06d0
+      size: 8

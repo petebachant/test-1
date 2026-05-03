@@ -4,15 +4,9 @@ title: Test 1
 description: ""
 git_repo_url: https://github.com/petebachant/test-1
 
-# If desired, storage options can be changed here
-# Maybe we want the ability to have certain paths go to certain storage
-# backends, and we need to track versions
 storage:
   dvc:
-    # If using the ck remote scheme, you can define what storage backend to
-    # use with it
-    kind: calkit-cloud # default -- can also be google-drive
-  # If we're managing certain files in git lfs
+    kind: calkit-cloud
   git-lfs:
     kind: hugging-face
     repo_url: petebachant/test-1-lfs
@@ -35,6 +29,9 @@ environments:
   jupydocker:
     kind: docker
     image: quay.io/jupyter/scipy-notebook:2025-12-31
+  conda-polars:
+    path: environment.yml
+    kind: conda
 
 pipeline:
   stages:
@@ -64,6 +61,31 @@ pipeline:
       inputs:
         - report/references.bib
         - report/figures
+    notebook-julia:
+      kind: jupyter-notebook
+      notebook_path: notebook-julia.ipynb
+      html_storage: git
+      executed_ipynb_storage: git
+      environment: j1
+    notebooks-conda-polars:
+      kind: jupyter-notebook
+      notebook_path: notebooks/conda-polars.ipynb
+      html_storage: git
+      executed_ipynb_storage: git
+      environment: conda-polars
+      outputs:
+        - notebooks/data.avro
+        - path: notebooks/data.parquet
+          storage: git
+    notebooks-other:
+      kind: jupyter-notebook
+      notebook_path: notebooks/other.ipynb
+      html_storage: git
+      executed_ipynb_storage: git
+      environment: py
+      outputs:
+        - path: results/sup.json
+          storage: git
 
 publications:
   - path: paper/main.pdf
@@ -94,9 +116,60 @@ questions:
 notebooks:
   - path: notebook.ipynb
     environment: py
+  - path: notebooks/conda-polars.ipynb
+    environment: conda-polars
+  - path: notebooks/other.ipynb
+    environment: py
 
 overleaf_sync:
   paper2:
     url: https://www.overleaf.com/project/54b68eff0ee71ad2767b704a
   report:
     url: https://www.overleaf.com/project/699f2a0fb20a38960a52bc26
+
+figures:
+  - path: figures/ups2.jpg
+    imported_from:
+      url: something.net
+  - path: figures/sick/portland-ups.jpeg
+    imported_from:
+      url: https://google.net
+  - path: figures/test.png
+    imported_from:
+      url: https://something.net
+  - path: paper/figures/000_000000000250000.png
+    imported_from:
+      url: cool.net
+  - path: paper2/figures/000_000000000250000.png
+    imported_from:
+      url: super.cool.net
+  - path: report/figures/processed_derivative.png
+    imported_from:
+      url: yep.com
+  - path: paper2/figures/cool.pdf
+    imported_from:
+      url: sock.net
+  - path: report/figures/processed_smooth.png
+    imported_from:
+      url: cool.yo
+  - path: report/figures/processed_timeseries.png
+    imported_from:
+      url: example.sweet
+  - path: report/figures/raw-data-spectra.png
+    imported_from:
+      url: ggg
+  - path: report/figures/raw_correlation.png
+    imported_from:
+      url: gggggg
+  - path: report/figures/raw_distributions.png
+    imported_from:
+      url: ggg
+  - path: report/figures/raw_scatter3d.png
+    imported_from:
+      url: fffff
+  - path: report/figures/raw_spectrogram.png
+    imported_from:
+      url: fffffff
+  - path: report/figures/raw_timeseries.png
+    imported_from:
+      url: ffff

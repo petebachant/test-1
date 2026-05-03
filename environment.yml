@@ -1,0 +1,9 @@
+name: test-1.conda-polars
+channels:
+  - conda-forge
+dependencies:
+  - polars
+  - ipykernel
+  - pandas
+  - numpy
+  - pyarrow
