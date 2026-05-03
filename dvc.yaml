@@ -1,4 +1,17 @@
 stages:
+  notebook:
+    cmd: calkit nb execute --environment py --no-check --to html "notebook.ipynb"
+    deps:
+      - .calkit/notebooks/cleaned/notebook.ipynb
+      - .calkit/envs/py/uv.lock
+    outs:
+      - figures/test.png
+      - .calkit/notebooks/executed/notebook.ipynb:
+          cache: true
+      - .calkit/notebooks/html/notebook.html:
+          cache: true
+    desc: Automatically generated from the 'notebook' stage in calkit.yaml.
+      Changes made here will be overwritten.
   build-paper:
     cmd: calkit latex build -e tex --no-check paper/main.tex
     deps:

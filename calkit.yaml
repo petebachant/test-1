@@ -38,13 +38,18 @@ environments:
 
 pipeline:
   stages:
+    notebook:
+      kind: jupyter-notebook
+      notebook_path: notebook.ipynb
+      environment: py
+      outputs:
+        - figures/test.png
     build-paper:
       kind: latex
       target_path: paper/main.tex
       environment: tex
       inputs:
         - paper/figures
-
     build-paper2:
       kind: latex
       target_path: paper2/main.tex
@@ -59,36 +64,37 @@ pipeline:
       inputs:
         - report/references.bib
         - report/figures
+
 publications:
   - path: paper/main.pdf
     title: A paper about things
     description:
     kind: journal-article
     stage: build-paper
-
   - path: paper2/main.pdf
     title: A paper about things
     description:
     kind: report
     stage: build-paper2
   - path: report/main.pdf
-    title: A Simple Workflow for Processing and Visualizing Experimental
-      Data
+    title: A Simple Workflow for Processing and Visualizing Experimental Data
     description:
     kind: report
     stage: build-report
+
 showcase:
   - publication: paper/main.pdf
 
 questions:
   - What's up?
-
   - This is another question?
   - Will this update my full name?
   - Can I still add a question?
+
 notebooks:
   - path: notebook.ipynb
     environment: py
+
 overleaf_sync:
   paper2:
     url: https://www.overleaf.com/project/54b68eff0ee71ad2767b704a

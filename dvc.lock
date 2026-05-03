@@ -74,3 +74,27 @@ stages:
       hash: md5
       md5: c971cf32b2a83e044b272511e7b1c2a8
       size: 1310433
+  notebook:
+    cmd: calkit nb execute --environment py --no-check --to html "notebook.ipynb"
+    deps:
+    - path: .calkit/envs/py/uv.lock
+      hash: md5
+      md5: 35f7e51eaae7411e9e32efa203332092
+      size: 181801
+    - path: .calkit/notebooks/cleaned/notebook.ipynb
+      hash: md5
+      md5: ca2aee1dbfa2de5811b043e2b91055f3
+      size: 638
+    outs:
+    - path: .calkit/notebooks/executed/notebook.ipynb
+      hash: md5
+      md5: 4735cbe85ccef27cf242e04167b7c198
+      size: 21819
+    - path: .calkit/notebooks/html/notebook.html
+      hash: md5
+      md5: 5e94f69de9ffbc8bd9e31556f07f4c5e
+      size: 290997
+    - path: figures/test.png
+      hash: md5
+      md5: 773ba775081ad591034e0f521ab0152a
+      size: 15109
