@@ -128,25 +128,25 @@ stages:
       nfiles: 1
     - path: .calkit/notebooks/cleaned/notebooks/conda-polars.ipynb
       hash: md5
-      md5: 83ccfea5a118fe6439a9a56a0d148f1e
-      size: 688
+      md5: e9bf997fa0f0120cd2fc9494604c7634
+      size: 718
     outs:
     - path: .calkit/notebooks/executed/notebooks/conda-polars.ipynb
       hash: md5
-      md5: bf702470bd47675cc7560cb27679a536
-      size: 2692
+      md5: f1b3f8928ce4f6631565d75a755ad63c
+      size: 2721
     - path: .calkit/notebooks/html/notebooks/conda-polars.html
       hash: md5
-      md5: 8570602bf5e05e141d767333f989c93a
-      size: 271944
+      md5: 0c1f1cf34f7d8c4701551ca551f128a0
+      size: 272177
     - path: notebooks/data.avro
       hash: md5
-      md5: 032a7bd7dd788aaaf0aa2715139b201b
-      size: 176
+      md5: 86d284f9db1bc836a8880b0494bcfaa3
+      size: 223
     - path: notebooks/data.parquet
       hash: md5
-      md5: 7060825cab8b94fe8130cb1192d7581d
-      size: 850
+      md5: 99fa05399dd952b84d2b2ae827a3d184
+      size: 1129
   notebooks-other:
     cmd: calkit nb execute --environment py --no-check --to html "notebooks/other.ipynb"
     deps:
