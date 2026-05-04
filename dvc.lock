@@ -156,17 +156,17 @@ stages:
       size: 181801
     - path: .calkit/notebooks/cleaned/notebooks/other.ipynb
       hash: md5
-      md5: 5e0497c32b95f60d3abdb3e0a5fb2b38
-      size: 765
+      md5: 0b4d133b78e3f69d8b7f7a91f9c38b33
+      size: 770
     outs:
     - path: .calkit/notebooks/executed/notebooks/other.ipynb
       hash: md5
-      md5: c28d9427ad73793f4e27098ab9c25e14
-      size: 2748
+      md5: 14163f19947ec02facb8095b4a110d73
+      size: 2758
     - path: .calkit/notebooks/html/notebooks/other.html
       hash: md5
-      md5: e23bd1c503e65e31d7ca6d071f23304b
-      size: 272174
+      md5: f833399cea46bad09b1dded61a4023fe
+      size: 272184
     - path: results/sup.json
       hash: md5
       md5: 42b7b4f2921788ea14dac5566e6f06d0
