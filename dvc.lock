@@ -103,21 +103,25 @@ stages:
     deps:
     - path: .calkit/notebooks/cleaned/notebook-julia.ipynb
       hash: md5
-      md5: 38adf0847d05094166a53449dfb75f4b
-      size: 636
+      md5: 7cfa71292d50ed066342b41d4760f26a
+      size: 1793
     - path: Manifest.toml
       hash: md5
-      md5: e4df3b0cb7ffd4fe006664e184936a12
-      size: 7192
+      md5: a4e29635454f1243f34e5b15fb2ca273
+      size: 57896
     outs:
     - path: .calkit/notebooks/executed/notebook-julia.ipynb
       hash: md5
-      md5: 01f4f5f4273a5553774c001a2fa0669b
-      size: 3684
+      md5: 8836a71932e1533ffb2e65607389bf35
+      size: 1705933
     - path: .calkit/notebooks/html/notebook-julia.html
       hash: md5
-      md5: 11e9762bb940930e3549f87c1f3ab5f5
-      size: 272514
+      md5: 817e6a3413720f5527486f37eee02daa
+      size: 1976808
+    - path: figures/sine.png
+      hash: md5
+      md5: 8911c9825fc37135c6c0f4e9dd5f7a1e
+      size: 55702
   notebooks-conda-polars:
     cmd: calkit nb execute --environment conda-polars --no-check --to html "notebooks/conda-polars.ipynb"
     deps:

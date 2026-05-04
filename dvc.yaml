@@ -50,6 +50,7 @@ stages:
       - .calkit/notebooks/cleaned/notebook-julia.ipynb
       - Manifest.toml
     outs:
+      - figures/sine.png
       - .calkit/notebooks/executed/notebook-julia.ipynb:
           cache: false
       - .calkit/notebooks/html/notebook-julia.html:
