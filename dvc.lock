@@ -79,8 +79,8 @@ stages:
     deps:
     - path: .calkit/envs/py/uv.lock
       hash: md5
-      md5: 35f7e51eaae7411e9e32efa203332092
-      size: 181801
+      md5: 071ddf442062fbeed94bad0a00336278
+      size: 185670
     - path: .calkit/notebooks/cleaned/notebook.ipynb
       hash: md5
       md5: 140606fb5945724d0dc5666d6d6e8128
@@ -88,7 +88,7 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebook.ipynb
       hash: md5
-      md5: 108a726d7d7034bc8775e5f0edc93d97
+      md5: 1be91a33be94ed4c7d2e99c3b1773557
       size: 23819
     - path: .calkit/notebooks/html/notebook.html
       hash: md5
@@ -156,8 +156,8 @@ stages:
     deps:
     - path: .calkit/envs/py/uv.lock
       hash: md5
-      md5: 35f7e51eaae7411e9e32efa203332092
-      size: 181801
+      md5: 071ddf442062fbeed94bad0a00336278
+      size: 185670
     - path: .calkit/notebooks/cleaned/notebooks/other.ipynb
       hash: md5
       md5: 0b4d133b78e3f69d8b7f7a91f9c38b33
@@ -165,7 +165,7 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebooks/other.ipynb
       hash: md5
-      md5: 14163f19947ec02facb8095b4a110d73
+      md5: 7bbd8a464d2c41095adc18be4450d98a
       size: 2758
     - path: .calkit/notebooks/html/notebooks/other.html
       hash: md5
