@@ -215,3 +215,4 @@ __marimo__/
 .calkit/notebooks/cleaned/notebooks/conda-polars.ipynb
 
 .calkit/notebooks/cleaned/notebooks/other.ipynb
+/wrf_parameter_uq.zip
