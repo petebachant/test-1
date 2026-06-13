@@ -37,8 +37,8 @@ stages:
       nfiles: 5
     - path: paper2/main.tex
       hash: md5
-      md5: 7d972cf0baea218aec5ab4425056a16b
-      size: 605
+      md5: 54b6278a22a012c0010762123d747244
+      size: 686
     - path: paper2/thing.txt
       hash: md5
       md5: b130eeb413db6d877a36b1804252ff59
@@ -46,8 +46,8 @@ stages:
     outs:
     - path: paper2/main.pdf
       hash: md5
-      md5: 56fa30272d3a475802371b6ebbc71013
-      size: 83915
+      md5: 79fb0d3f583c121d6030af80b2d6e9c6
+      size: 85490
   build-report:
     cmd: calkit latex build -e tex --no-check report/main.tex
     deps:
@@ -75,7 +75,8 @@ stages:
       md5: c971cf32b2a83e044b272511e7b1c2a8
       size: 1310433
   notebook:
-    cmd: calkit nb execute --environment py --no-check --to html "notebook.ipynb"
+    cmd: calkit nb execute --environment py --no-check --to html 
+      "notebook.ipynb"
     deps:
     - path: .calkit/envs/py/uv.lock
       hash: md5
@@ -99,7 +100,8 @@ stages:
       md5: 2d9d86da95ae09a484b6087a36ea872d
       size: 16635
   notebook-julia:
-    cmd: calkit nb execute --environment j1 --no-check --to html "notebook-julia.ipynb"
+    cmd: calkit nb execute --environment j1 --no-check --to html 
+      "notebook-julia.ipynb"
     deps:
     - path: .calkit/notebooks/cleaned/notebook-julia.ipynb
       hash: md5
@@ -123,7 +125,8 @@ stages:
       md5: 8911c9825fc37135c6c0f4e9dd5f7a1e
       size: 55702
   notebooks-conda-polars:
-    cmd: calkit nb execute --environment conda-polars --no-check --to html "notebooks/conda-polars.ipynb"
+    cmd: calkit nb execute --environment conda-polars --no-check --to html 
+      "notebooks/conda-polars.ipynb"
     deps:
     - path: .calkit/env-locks/conda-polars
       hash: md5
@@ -152,7 +155,8 @@ stages:
       md5: 99fa05399dd952b84d2b2ae827a3d184
       size: 1129
   notebooks-other:
-    cmd: calkit nb execute --environment py --no-check --to html "notebooks/other.ipynb"
+    cmd: calkit nb execute --environment py --no-check --to html 
+      "notebooks/other.ipynb"
     deps:
     - path: .calkit/envs/py/uv.lock
       hash: md5
