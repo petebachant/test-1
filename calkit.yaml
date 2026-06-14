@@ -100,8 +100,8 @@ publications:
     kind: report
     stage: build-paper2
   - path: report/main.pdf
-    title: A Simple Workflow for Processing and Visualizing 
-      Experimental Data
+    title: A Simple Workflow for Processing and Visualizing Experimental
+      Data
     description:
     kind: report
     stage: build-report
@@ -175,3 +175,11 @@ figures:
   - path: report/figures/raw_timeseries.png
     imported_from:
       url: ffff
+releases:
+  v0.0.2:
+    kind: project
+    path: .
+    publisher: arxiv
+    url: https://sup.lol.com
+    doi: 10.555.znznznz
+    date: '2026-06-14'
