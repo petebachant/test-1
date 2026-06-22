@@ -191,3 +191,10 @@ releases:
     date: '2026-06-22'
     description: This is a very cool release.
     public: false
+  paper2-v0:
+    kind: project
+    path: paper2/main.pdf
+    internal: true
+    git_rev: b1f4b5e9c0ebbc880f1e9cb36352912a24d8809a
+    date: '2026-06-22'
+    public: false
