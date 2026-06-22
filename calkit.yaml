@@ -183,3 +183,11 @@ releases:
     url: https://sup.lol.com
     doi: 10.555.znznznz
     date: '2026-06-14'
+  v0.1.0:
+    kind: project
+    path: .
+    internal: true
+    git_rev: 2b55ffa20a961b6e9fe700aee27b96ea1108f821
+    date: '2026-06-22'
+    description: This is a very cool release.
+    public: false
