@@ -198,3 +198,10 @@ releases:
     git_rev: b1f4b5e9c0ebbc880f1e9cb36352912a24d8809a
     date: '2026-06-22'
     public: false
+  v0.1.1:
+    kind: project
+    path: .
+    git_rev: ca0945ffda0f0eb880836613f475d45bd5bdb787
+    date: '2026-06-26'
+    description: Sup.
+    internal: true
