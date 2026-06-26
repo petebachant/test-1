@@ -205,3 +205,10 @@ releases:
     date: '2026-06-26'
     description: Sup.
     internal: true
+  v0.1.2:
+    kind: publication
+    path: .
+    git_rev: 3725d69742400706e8431159ab4ae3d2aa148d2b
+    date: '2026-06-26'
+    description: Sup lol.
+    internal: true
