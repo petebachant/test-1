@@ -1,0 +1,5 @@
+outs:
+  - md5: 3be93745bbb9f18c9798c8e0e1a93560
+    size: 84903
+    hash: md5
+    path: test-1-main-paper-v2.pdf
