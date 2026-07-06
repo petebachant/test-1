@@ -1,4 +1,3 @@
-name: test-1.conda-polars
 channels:
   - conda-forge
 dependencies:
@@ -129,3 +128,4 @@ dependencies:
   - zeromq=4.3.5=h4818236_10
   - zlib=1.3.2=h8088a28_2
   - zstd=1.5.7=hbf9d68e_6
+name: test-1.conda-polars
