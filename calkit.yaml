@@ -110,7 +110,9 @@ showcase:
   - publication: paper/main.pdf
 
 questions:
-  - What's up?
+  - question: What's up?
+    hypothesis: Not much.
+    answer: A lot.
   - This is another question?
   - Will this update my full name?
   - Can I still add a question?
