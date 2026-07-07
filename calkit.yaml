@@ -113,6 +113,11 @@ questions:
   - question: What's up?
     hypothesis: Not much.
     answer: A lot.
+    evidence:
+      - kind: result
+        path: results/sup.json
+        key: yoyo
+        explanation: Pretty obvious dawg.
   - This is another question?
   - Will this update my full name?
   - Can I still add a question?
