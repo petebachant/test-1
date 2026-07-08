@@ -120,6 +120,10 @@ questions:
         explanation: Pretty obvious dawg.
   - question: This is another question?
     hypothesis: I expect Caltech Pete to answer.
+    answer: Pete indeed did answer.
+    evidence:
+      - kind: publication
+        path: paper/main.pdf
   - Will this update my full name?
   - Can I still add a question?
 
