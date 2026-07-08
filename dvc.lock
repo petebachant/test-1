@@ -15,13 +15,13 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: 63b33680c3abdac780009cc24d9f7a54
-      size: 710
+      md5: 68ffb080b72fa6b4f52e5be5450baaf7
+      size: 722
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: 48414093faff229b3da99e20b1d1968f
-      size: 86111
+      md5: d0b7cdd26411d04d7be3a58a0f82a5e5
+      size: 86125
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
@@ -37,8 +37,8 @@ stages:
       nfiles: 5
     - path: paper2/main.tex
       hash: md5
-      md5: d59e7105eaef303fa9b45a36e0bc5333
-      size: 675
+      md5: 659f5ff7f89c64315d468d58da43bd9a
+      size: 740
     - path: paper2/thing.txt
       hash: md5
       md5: b130eeb413db6d877a36b1804252ff59
@@ -46,8 +46,8 @@ stages:
     outs:
     - path: paper2/main.pdf
       hash: md5
-      md5: 453cbd9df346e4a9c3e1b619ab7457c7
-      size: 85296
+      md5: 13f5c613407146092d7972e0733fc0e0
+      size: 86534
   build-report:
     cmd: calkit latex build -e tex --no-check report/main.tex
     deps:
@@ -72,7 +72,7 @@ stages:
     outs:
     - path: report/main.pdf
       hash: md5
-      md5: e1681fc6ccae19e65d76f031c7fc5f91
+      md5: 0f31c51842e7709f6de59429f7e1e049
       size: 1310433
   notebook:
     cmd: calkit nb execute --environment py --no-check --to html 
@@ -89,12 +89,12 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebook.ipynb
       hash: md5
-      md5: 2d810ec8e2b51c0b919cec92457cfa51
-      size: 23812
+      md5: 6eaffac24cab6f64ad6ead5444e5995f
+      size: 23855
     - path: .calkit/notebooks/html/notebook.html
       hash: md5
-      md5: 787d26efd6ed187e1ed44b51acf9d01c
-      size: 292990
+      md5: 9b808d31a2047a77d85563f1e64242c3
+      size: 292997
     - path: figures/test.png
       hash: md5
       md5: 2d9d86da95ae09a484b6087a36ea872d
