@@ -118,7 +118,8 @@ questions:
         path: results/sup.json
         key: yoyo
         explanation: Pretty obvious dawg.
-  - This is another question?
+  - question: This is another question?
+    hypothesis: I expect Caltech Pete to answer.
   - Will this update my full name?
   - Can I still add a question?
 
