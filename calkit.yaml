@@ -128,6 +128,7 @@ questions:
     answer: Sure, yeah. Whatever.
   - Can I still add a question?
 
+  - Can I add another?
 notebooks:
   - path: notebook.ipynb
     environment: py
