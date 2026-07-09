@@ -124,7 +124,8 @@ questions:
     evidence:
       - kind: publication
         path: paper/main.pdf
-  - Will this update my full name?
+  - question: Will this update my full name?
+    answer: Sure, yeah. Whatever.
   - Can I still add a question?
 
 notebooks:
