@@ -100,8 +100,8 @@ publications:
     kind: report
     stage: build-paper2
   - path: report/main.pdf
-    title: A Simple Workflow for Processing and Visualizing 
-      Experimental Data
+    title: A Simple Workflow for Processing and Visualizing Experimental
+      Data
     description:
     kind: report
     stage: build-report
@@ -233,3 +233,5 @@ releases:
     date: '2026-06-27'
     internal: true
     stored_path: .calkit/releases/paper-v2/test-1-main-paper-v2.pdf
+references:
+  - path: references.bib
