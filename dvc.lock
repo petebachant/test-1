@@ -67,12 +67,12 @@ stages:
       size: 4574
     - path: report/references.bib
       hash: md5
-      md5: 2e34cc5029dfe127b9ebff51205e4978
-      size: 1213
+      md5: 9132a6d551ddf0d662c67a0782172bf1
+      size: 1333
     outs:
     - path: report/main.pdf
       hash: md5
-      md5: 0f31c51842e7709f6de59429f7e1e049
+      md5: fff36d3a34ce20ae71b069ad9e2e2f27
       size: 1310433
   notebook:
     cmd: calkit nb execute --environment py --no-check --to html 
