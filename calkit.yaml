@@ -3,6 +3,7 @@ name: test-1
 title: Test 1
 description: ""
 git_repo_url: https://github.com/petebachant/test-1
+hub: http://localhost:5173
 
 storage:
   dvc:
