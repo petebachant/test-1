@@ -37,7 +37,7 @@ stages:
   build-paper2-diff-main:
     cmd: calkit latex diff -e tex --no-check --from 
       ca8a1d80baded3bb4922e2c2a74b716902c94b75 --to 
-      d67568133caf3dbfcce36800205c392f3139df73 --output-dir 
+      dc8021f47cef210d9dfb4aa865b5dcf446951ebf --output-dir 
       .calkit/latex-diffs/main paper2/main.tex
     deps: []
     outs:
