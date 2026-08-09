@@ -34,6 +34,16 @@ stages:
       - paper2/main.pdf
     desc: Automatically generated from the 'build-paper2' stage in 
       calkit.yaml. Changes made here will be overwritten.
+  build-paper2-diff-main:
+    cmd: calkit latex diff -e tex --no-check --from 
+      ca8a1d80baded3bb4922e2c2a74b716902c94b75 --to 
+      bd2cb379e3c0d05df4841de32f575154865b6e2d --output-dir 
+      .calkit/latex-diffs/main paper2/main.tex
+    deps: []
+    outs:
+      - .calkit/latex-diffs/main/paper2/main.pdf
+    desc: Automatically generated from the 'build-paper2' stage in 
+      calkit.yaml. Changes made here will be overwritten.
   build-report:
     cmd: calkit latex build -e tex --no-check report/main.tex
     deps:

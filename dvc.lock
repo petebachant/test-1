@@ -179,3 +179,13 @@ stages:
       hash: md5
       md5: 42b7b4f2921788ea14dac5566e6f06d0
       size: 8
+  build-paper2-diff-main:
+    cmd: calkit latex diff -e tex --no-check --from 
+      ca8a1d80baded3bb4922e2c2a74b716902c94b75 --to 
+      bd2cb379e3c0d05df4841de32f575154865b6e2d --output-dir 
+      .calkit/latex-diffs/main paper2/main.tex
+    outs:
+    - path: .calkit/latex-diffs/main/paper2/main.pdf
+      hash: md5
+      md5: de2f68e3aa5bd95f6d12444b6c29c6fb
+      size: 90942

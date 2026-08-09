@@ -55,6 +55,8 @@ pipeline:
       inputs:
         - paper2/thing.txt
         - paper2/figures
+      diffs:
+        - main
     build-report:
       kind: latex
       target_path: report/main.tex
@@ -197,13 +199,13 @@ releases:
     publisher: arxiv
     url: https://sup.lol.com
     doi: 10.555.znznznz
-    date: '2026-06-14'
+    date: "2026-06-14"
   v0.1.0:
     kind: project
     path: .
     internal: true
     git_rev: 2b55ffa20a961b6e9fe700aee27b96ea1108f821
-    date: '2026-06-22'
+    date: "2026-06-22"
     description: This is a very cool release.
     public: false
   paper2-v0:
@@ -211,27 +213,27 @@ releases:
     path: paper2/main.pdf
     internal: true
     git_rev: b1f4b5e9c0ebbc880f1e9cb36352912a24d8809a
-    date: '2026-06-22'
+    date: "2026-06-22"
     public: false
   v0.1.1:
     kind: project
     path: .
     git_rev: ca0945ffda0f0eb880836613f475d45bd5bdb787
-    date: '2026-06-26'
+    date: "2026-06-26"
     description: Sup.
     internal: true
   v0.1.2:
     kind: publication
     path: .
     git_rev: 3725d69742400706e8431159ab4ae3d2aa148d2b
-    date: '2026-06-26'
+    date: "2026-06-26"
     description: Sup lol.
     internal: true
   paper-v2:
     kind: publication
     path: paper/main.pdf
     git_rev: 24dec4ed56b81c9343411933db08ac731e70d5e3
-    date: '2026-06-27'
+    date: "2026-06-27"
     internal: true
     stored_path: .calkit/releases/paper-v2/test-1-main-paper-v2.pdf
 
