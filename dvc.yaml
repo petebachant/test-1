@@ -36,10 +36,14 @@ stages:
       calkit.yaml. Changes made here will be overwritten.
   build-paper2-diff-main:
     cmd: calkit latex diff -e tex --no-check --from 
-      ca8a1d80baded3bb4922e2c2a74b716902c94b75 --to 
-      dc8021f47cef210d9dfb4aa865b5dcf446951ebf --output-dir 
+      0abbf805ec9c1ff0f2b1764ea55d78b3bdf922a0 --to 
+      bd2cb379e3c0d05df4841de32f575154865b6e2d --output-dir 
       .calkit/latex-diffs/main paper2/main.tex
-    deps: []
+    deps:
+      - paper2/main.tex
+      - paper2/thing.txt
+      - paper2/figures
+      - .calkit/env-locks/tex
     outs:
       - .calkit/latex-diffs/main/paper2/main.pdf
     desc: Automatically generated from the 'build-paper2' stage in 

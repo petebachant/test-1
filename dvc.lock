@@ -181,11 +181,30 @@ stages:
       size: 8
   build-paper2-diff-main:
     cmd: calkit latex diff -e tex --no-check --from 
-      ca8a1d80baded3bb4922e2c2a74b716902c94b75 --to 
-      dc8021f47cef210d9dfb4aa865b5dcf446951ebf --output-dir 
+      0abbf805ec9c1ff0f2b1764ea55d78b3bdf922a0 --to 
+      bd2cb379e3c0d05df4841de32f575154865b6e2d --output-dir 
       .calkit/latex-diffs/main paper2/main.tex
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: 1c4cccf8b7888ff3ada7a423059c5b14.dir
+      size: 2295
+      nfiles: 2
+    - path: paper2/figures
+      hash: md5
+      md5: 82323be8c73b39eb98695ce12317e066.dir
+      size: 18129
+      nfiles: 5
+    - path: paper2/main.tex
+      hash: md5
+      md5: a80b2201b3ae0b23314965e792247657
+      size: 837
+    - path: paper2/thing.txt
+      hash: md5
+      md5: b130eeb413db6d877a36b1804252ff59
+      size: 20
     outs:
     - path: .calkit/latex-diffs/main/paper2/main.pdf
       hash: md5
-      md5: 658a3c0e4d03b745db77e7c1d15df734
-      size: 90924
+      md5: 15d5ca2a7ca7cc27e6514e6c39b96054
+      size: 90942
