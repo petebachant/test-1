@@ -117,8 +117,8 @@ questions:
     evidence:
       - kind: result
         path: results/sup.json
-        key: yoyo
-        explanation: Pretty obvious dawg.
+        key: proof
+        explanation: Pretty obvious.
   - question: This is another question?
     hypothesis: I expect Caltech Pete to answer.
     answer: Pete indeed did answer.
