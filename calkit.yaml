@@ -127,8 +127,11 @@ questions:
         path: paper/main.pdf
   - question: Will this update my full name?
     answer: Sure, yeah. Whatever.
-  - Can I still add a question?
+  -
 
+    question: Can I still add a question?
+    hypothesis: Yes.
+    answer: Definitely.
   - Can I add another?
 notebooks:
   - path: notebook.ipynb
