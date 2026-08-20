@@ -127,9 +127,8 @@ questions:
         path: paper/main.pdf
   - question: Will this update my full name?
     answer: Sure, yeah. Whatever.
-  -
 
-    question: Can I still add a question?
+  - question: Can I still add a question?
     hypothesis: Yes.
     answer: Definitely.
   - Can I add another?
@@ -240,3 +239,7 @@ releases:
 
 references:
   - path: references.bib
+datasets:
+  - path: data/bechdel
+    imported_from:
+      doi: 10.555.zenodo.xxx
