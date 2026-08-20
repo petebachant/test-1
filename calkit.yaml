@@ -239,7 +239,3 @@ releases:
 
 references:
   - path: references.bib
-datasets:
-  - path: data/bechdel
-    imported_from:
-      doi: 10.555.zenodo.xxx
