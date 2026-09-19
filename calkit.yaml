@@ -125,6 +125,7 @@ questions:
     evidence:
       - kind: publication
         path: paper/main.pdf
+        explanation: It's obvious.
   - question: Will this update my full name?
     answer: Sure, yeah. Whatever.
 
