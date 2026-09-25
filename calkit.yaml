@@ -15,7 +15,7 @@ storage:
 environments:
   tex:
     kind: docker
-    image: texlive/texlive:latest-full
+    image: ghcr.io/calkit/latex
   py:
     kind: uv
     path: .calkit/envs/py/pyproject.toml
