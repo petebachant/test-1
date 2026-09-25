@@ -125,6 +125,7 @@ questions:
     evidence:
       - kind: publication
         path: paper/main.pdf
+        explanation: It's obvious.
   - question: Will this update my full name?
     answer: Sure, yeah. Whatever.
 
@@ -132,6 +133,7 @@ questions:
     hypothesis: Yes.
     answer: Definitely.
   - Can I add another?
+  - This one doesn't have an answer yet.
 notebooks:
   - path: notebook.ipynb
     environment: py
