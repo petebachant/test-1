@@ -5,8 +5,8 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: e739eee8b4e2fb7d9ab5b89ff085e9b5.dir
-      size: 2136
+      md5: 754729e57f9f4aa1cb5ceb64a84b6901.dir
+      size: 2658
       nfiles: 2
     - path: paper/figures
       hash: md5
@@ -20,33 +20,25 @@ stages:
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: d93abfcdbf8ff909e8efe269a7e7123b
-      size: 84722
+      md5: bd93eec86d4afa846de7a19b67882ede
+      size: 84733
   build-paper2:
-    cmd: calkit latex build -e tex --no-check --provenance paper2/main.tex
+    cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: e739eee8b4e2fb7d9ab5b89ff085e9b5.dir
-      size: 2136
+      md5: 754729e57f9f4aa1cb5ceb64a84b6901.dir
+      size: 2658
       nfiles: 2
     - path: paper2/figures
       hash: md5
-      md5: 3ac79d43fca8fa43b9108129d682ef3b.dir
-      size: 67790
-      nfiles: 6
-    - path: paper2/figures/paper2-error.png
-      hash: md5
-      md5: d59e8cae99f24acac3864df9c7dce041
-      size: 49661
-    - path: paper2/generated-numbers.tex
-      hash: md5
-      md5: 5b7c91825853e113075d7e9d1439e507
-      size: 935
+      md5: 82323be8c73b39eb98695ce12317e066.dir
+      size: 18129
+      nfiles: 5
     - path: paper2/main.tex
       hash: md5
-      md5: 80e6d745241a5f8ad32a996af9b8e76e
-      size: 1184
+      md5: be82ce3dba291aaac96455e56fa86fe9
+      size: 851
     - path: paper2/thing.txt
       hash: md5
       md5: b130eeb413db6d877a36b1804252ff59
@@ -54,19 +46,15 @@ stages:
     outs:
     - path: paper2/main.pdf
       hash: md5
-      md5: 534d2eef7747b098c12d4ad23bce1453
-      size: 129228
-    - path: paper2/main.provenance.json
-      hash: md5
-      md5: f687490fc1cfc9c956f865757df8419f
-      size: 1844
+      md5: f9486ec2b721fd338a2cca7a58cb4bd7
+      size: 87323
   build-report:
     cmd: calkit latex build -e tex --no-check report/main.tex
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: e739eee8b4e2fb7d9ab5b89ff085e9b5.dir
-      size: 2136
+      md5: 754729e57f9f4aa1cb5ceb64a84b6901.dir
+      size: 2658
       nfiles: 2
     - path: report/figures
       hash: md5
@@ -84,10 +72,11 @@ stages:
     outs:
     - path: report/main.pdf
       hash: md5
-      md5: eaa03df39b44077a6157c0c957dcbe63
-      size: 1310433
+      md5: 665e7b7eff7c9c807eb26d2b3842b4e8
+      size: 1310434
   notebook:
-    cmd: calkit nb execute --environment py --no-check --to html "notebook.ipynb"
+    cmd: calkit nb execute --environment py --no-check --to html 
+      "notebook.ipynb"
     deps:
     - path: .calkit/envs/py/uv.lock
       hash: md5
@@ -95,12 +84,12 @@ stages:
       size: 185670
     - path: .calkit/notebooks/cleaned/notebook.ipynb
       hash: md5
-      md5: 32acdcd19536181f07b2b8172fdf0b92
-      size: 728
+      md5: b3ad45615b899153108e3ba115a424ce
+      size: 680
     outs:
     - path: .calkit/notebooks/executed/notebook.ipynb
       hash: md5
-      md5: 6a5d3b66b7e5f6798e3273c13042623f
+      md5: 1cdb1cef5971fc8e9c03ff88880a56d4
       size: 23933
     - path: .calkit/notebooks/html/notebook.html
       hash: md5
@@ -111,12 +100,13 @@ stages:
       md5: 2d9d86da95ae09a484b6087a36ea872d
       size: 16635
   notebook-julia:
-    cmd: calkit nb execute --environment j1 --no-check --to html "notebook-julia.ipynb"
+    cmd: calkit nb execute --environment j1 --no-check --to html 
+      "notebook-julia.ipynb"
     deps:
     - path: .calkit/notebooks/cleaned/notebook-julia.ipynb
       hash: md5
-      md5: 7cfa71292d50ed066342b41d4760f26a
-      size: 1793
+      md5: 36be5d7de6b9a4647176942f0ca5f8a6
+      size: 1673
     - path: Manifest.toml
       hash: md5
       md5: a4e29635454f1243f34e5b15fb2ca273
@@ -124,32 +114,33 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebook-julia.ipynb
       hash: md5
-      md5: 3a09eeefc2131768b10ba6a945b90757
-      size: 1706420
+      md5: d4387d09e54250b876083012129c3293
+      size: 1706411
     - path: .calkit/notebooks/html/notebook-julia.html
       hash: md5
-      md5: 2b5bd070621c61c486ec2d6ec8638583
-      size: 1977333
+      md5: 871df64783f8e85175304f5f37eaec2e
+      size: 1977325
     - path: figures/sine.png
       hash: md5
       md5: 8911c9825fc37135c6c0f4e9dd5f7a1e
       size: 55702
   notebooks-conda-polars:
-    cmd: calkit nb execute --environment conda-polars --no-check --to html "notebooks/conda-polars.ipynb"
+    cmd: calkit nb execute --environment conda-polars --no-check --to html 
+      "notebooks/conda-polars.ipynb"
     deps:
     - path: .calkit/env-locks/conda-polars
       hash: md5
-      md5: af72db83a8d03902d4f2a2d1af5f57ef.dir
+      md5: 063285673bb062fdc893eee2db2ac088.dir
       size: 4434
       nfiles: 1
     - path: .calkit/notebooks/cleaned/notebooks/conda-polars.ipynb
       hash: md5
-      md5: e9bf997fa0f0120cd2fc9494604c7634
-      size: 718
+      md5: eb78d771847a02090c7644fafa4785be
+      size: 670
     outs:
     - path: .calkit/notebooks/executed/notebooks/conda-polars.ipynb
       hash: md5
-      md5: 5fcfbba6a2cf5589ec1d9ca6c901d8a0
+      md5: 047b8f93adfdb8ceecfa7b083358c17f
       size: 2757
     - path: .calkit/notebooks/html/notebooks/conda-polars.html
       hash: md5
@@ -164,7 +155,8 @@ stages:
       md5: 99fa05399dd952b84d2b2ae827a3d184
       size: 1129
   notebooks-other:
-    cmd: calkit nb execute --environment py --no-check --to html "notebooks/other.ipynb"
+    cmd: calkit nb execute --environment py --no-check --to html 
+      "notebooks/other.ipynb"
     deps:
     - path: .calkit/envs/py/uv.lock
       hash: md5
@@ -172,13 +164,13 @@ stages:
       size: 185670
     - path: .calkit/notebooks/cleaned/notebooks/other.ipynb
       hash: md5
-      md5: 0b4d133b78e3f69d8b7f7a91f9c38b33
-      size: 770
+      md5: e32a53412fb960d99a7497f77a8989d5
+      size: 722
     outs:
     - path: .calkit/notebooks/executed/notebooks/other.ipynb
       hash: md5
-      md5: 5438cb6bee2b4119fcfeb0d8ef697365
-      size: 2794
+      md5: 89a0d6e3e4877275dec22d4d3fda1b77
+      size: 2793
     - path: .calkit/notebooks/html/notebooks/other.html
       hash: md5
       md5: f833399cea46bad09b1dded61a4023fe
@@ -208,8 +200,9 @@ stages:
       md5: 68d7b2fd68e81d48dac74880e4d170f0
       size: 130
   paper2-numbers:
-    cmd: calkit latex from-json 'results/paper2-numbers.json' --output 'paper2/generated-numbers.tex'
-      --command result --key improvement --key n_cases --key cases.worst.error
+    cmd: calkit latex from-json 'results/paper2-numbers.json' --output 
+      'paper2/generated-numbers.tex' --command result --key improvement --key 
+      n_cases --key cases.worst.error
     deps:
     - path: results/paper2-numbers.json
       hash: md5
@@ -221,7 +214,8 @@ stages:
       md5: 5b7c91825853e113075d7e9d1439e507
       size: 935
   paper2-copy-figures:
-    cmd: calkit map-paths --file-to-file 'figures/paper2-error.png->paper2/figures/paper2-error.png'
+    cmd: calkit map-paths --file-to-file 
+      'figures/paper2-error.png->paper2/figures/paper2-error.png'
     deps:
     - path: figures/paper2-error.png
       hash: md5
