@@ -15,12 +15,12 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: 376b1aa811f4a0fc1ecb13abd11ac6b2
-      size: 597
+      md5: a5d34b999f35eda9a172f3e034f1ebd2
+      size: 862
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: bd93eec86d4afa846de7a19b67882ede
+      md5: 0635e952b25fe43060866f4b38f7209c
       size: 84733
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
