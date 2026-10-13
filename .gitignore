@@ -218,3 +218,5 @@ __marimo__/
 /wrf_parameter_uq.zip
 
 .calkit/latex-diffs/main/.DS_Store
+
+.calkit/markdown/docs/my-markdown/main.md/pdf/main.synctex.gz

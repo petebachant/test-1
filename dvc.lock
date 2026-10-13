@@ -226,3 +226,25 @@ stages:
       hash: md5
       md5: d59e8cae99f24acac3864df9c7dce041
       size: 49661
+  my-markdown/pdf:
+    cmd: calkit latex from-markdown docs/my-markdown/main.md -o 
+      docs/my-markdown/main.pdf -e tex --no-check
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: b2d28555a90965646645402d6964aa46.dir
+      size: 2832
+      nfiles: 2
+    - path: calkit.yaml
+      hash: md5
+      md5: 6281d1d8539554ee514b7810598c633b
+      size: 5998
+    - path: docs/my-markdown/main.md
+      hash: md5
+      md5: 8fd9b10b7e8b48e911837794251e11d9
+      size: 47
+    outs:
+    - path: docs/my-markdown/main.pdf
+      hash: md5
+      md5: 32906aa8126d39c16130d7a74d309746
+      size: 49777

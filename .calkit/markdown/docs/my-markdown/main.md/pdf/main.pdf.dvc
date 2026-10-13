@@ -1,0 +1,5 @@
+outs:
+- md5: 32906aa8126d39c16130d7a74d309746
+  size: 49777
+  hash: md5
+  path: main.pdf
