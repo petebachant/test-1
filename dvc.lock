@@ -5,8 +5,8 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: 754729e57f9f4aa1cb5ceb64a84b6901.dir
-      size: 2658
+      md5: b2d28555a90965646645402d6964aa46.dir
+      size: 2832
       nfiles: 2
     - path: paper/figures
       hash: md5
@@ -27,8 +27,8 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: 754729e57f9f4aa1cb5ceb64a84b6901.dir
-      size: 2658
+      md5: b2d28555a90965646645402d6964aa46.dir
+      size: 2832
       nfiles: 2
     - path: paper2/figures
       hash: md5
@@ -53,8 +53,8 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: 754729e57f9f4aa1cb5ceb64a84b6901.dir
-      size: 2658
+      md5: b2d28555a90965646645402d6964aa46.dir
+      size: 2832
       nfiles: 2
     - path: report/figures
       hash: md5
@@ -72,7 +72,7 @@ stages:
     outs:
     - path: report/main.pdf
       hash: md5
-      md5: 665e7b7eff7c9c807eb26d2b3842b4e8
+      md5: d8d642e937dfd84697b6b7757b0f4edf
       size: 1310434
   notebook:
     cmd: calkit nb execute --environment py --no-check --to html 
