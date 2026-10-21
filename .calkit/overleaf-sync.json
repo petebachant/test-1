@@ -6,5 +6,9 @@
   "report": {
     "project_id": "699f2a0fb20a38960a52bc26",
     "last_sync_commit": "d982d64bc4a2a2136e190d06f3e87ecac1e4f9c3"
+  },
+  "caltech-thesis": {
+    "project_id": "6ad91b383024e401e964b57a",
+    "last_sync_commit": "267059abea790d4a67187283737668857b6428c5"
   }
 }
