@@ -95,6 +95,10 @@ pipeline:
         output_path: docs/my-markdown/main.pdf
         environment: tex
 
+    build-caltech-thesis:
+      kind: latex
+      environment: tex
+      target_path: caltech-thesis/main.tex
 publications:
   - path: paper/main.pdf
     title: A paper about things
@@ -113,6 +117,11 @@ publications:
     kind: report
     stage: build-report
 
+  - path: caltech-thesis/main.pdf
+    title: '[Thesis Title]'
+    description:
+    kind:
+    stage: build-caltech-thesis
 showcase:
   - publication: paper/main.pdf
 
@@ -154,6 +163,8 @@ overleaf_sync:
   report:
     url: https://www.overleaf.com/project/699f2a0fb20a38960a52bc26
 
+  caltech-thesis:
+    url: https://www.overleaf.com/project/6ad91b383024e401e964b57a
 figures:
   - path: figures/ups2.jpg
     imported_from:
