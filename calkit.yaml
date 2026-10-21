@@ -15,7 +15,7 @@ storage:
 environments:
   tex:
     kind: docker
-    image: ghcr.io/calkit/latex
+    image: ghcr.io/calkit/latex:0.1.7
   py:
     kind: uv
     path: .calkit/envs/py/pyproject.toml

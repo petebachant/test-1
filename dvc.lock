@@ -5,7 +5,7 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: b2d28555a90965646645402d6964aa46.dir
+      md5: 551b3ad9651bffcb5bacc673167d130f.dir
       size: 2832
       nfiles: 2
     - path: paper/figures
@@ -20,14 +20,14 @@ stages:
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: 0635e952b25fe43060866f4b38f7209c
-      size: 84733
+      md5: 039cc8fe4386b488ec8bd46d5b3b24ed
+      size: 84671
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: b2d28555a90965646645402d6964aa46.dir
+      md5: 551b3ad9651bffcb5bacc673167d130f.dir
       size: 2832
       nfiles: 2
     - path: paper2/figures
@@ -46,14 +46,14 @@ stages:
     outs:
     - path: paper2/main.pdf
       hash: md5
-      md5: 2c51b6df857b942bfe59e4ad9b0393e8
-      size: 87323
+      md5: ce0aba7f620f5e3032aa9c3442a727da
+      size: 87262
   build-report:
     cmd: calkit latex build -e tex --no-check report/main.tex
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: b2d28555a90965646645402d6964aa46.dir
+      md5: 551b3ad9651bffcb5bacc673167d130f.dir
       size: 2832
       nfiles: 2
     - path: report/figures
@@ -72,8 +72,8 @@ stages:
     outs:
     - path: report/main.pdf
       hash: md5
-      md5: d8d642e937dfd84697b6b7757b0f4edf
-      size: 1310434
+      md5: 8801ac265f6f3be9bfca943d43b92f75
+      size: 1310372
   notebook:
     cmd: calkit nb execute --environment py --no-check --to html 
       "notebook.ipynb"
@@ -232,13 +232,13 @@ stages:
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
-      md5: b2d28555a90965646645402d6964aa46.dir
+      md5: 551b3ad9651bffcb5bacc673167d130f.dir
       size: 2832
       nfiles: 2
     - path: calkit.yaml
       hash: md5
-      md5: 6281d1d8539554ee514b7810598c633b
-      size: 5998
+      md5: 7f784350b6633cbe415cfe356844ab91
+      size: 6320
     - path: docs/my-markdown/main.md
       hash: md5
       md5: 8fd9b10b7e8b48e911837794251e11d9
@@ -246,5 +246,22 @@ stages:
     outs:
     - path: docs/my-markdown/main.pdf
       hash: md5
-      md5: 32906aa8126d39c16130d7a74d309746
-      size: 49777
+      md5: 47ad27754ba51e5c6c06cc19d2746494
+      size: 49715
+  build-caltech-thesis:
+    cmd: calkit latex build -e tex --no-check caltech-thesis/main.tex
+    deps:
+    - path: .calkit/env-locks/tex
+      hash: md5
+      md5: 551b3ad9651bffcb5bacc673167d130f.dir
+      size: 2832
+      nfiles: 2
+    - path: caltech-thesis/main.tex
+      hash: md5
+      md5: d8c56f375fbe4e1cfd04159ad5310826
+      size: 5507
+    outs:
+    - path: caltech-thesis/main.pdf
+      hash: md5
+      md5: 596bf0c9c14ad0fe96588fd09817107b
+      size: 159211

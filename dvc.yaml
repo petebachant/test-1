@@ -90,6 +90,15 @@ stages:
           cache: false
     desc: Automatically generated from the 'notebooks-other' stage in
       calkit.yaml. Changes made here will be overwritten.
+  build-caltech-thesis:
+    cmd: calkit latex build -e tex --no-check caltech-thesis/main.tex
+    deps:
+      - caltech-thesis/main.tex
+      - .calkit/env-locks/tex
+    outs:
+      - caltech-thesis/main.pdf
+    desc: Automatically generated from the 'build-caltech-thesis' stage in
+      calkit.yaml. Changes made here will be overwritten.
   my-markdown/pdf:
     cmd: calkit latex from-markdown docs/my-markdown/main.md -o
       docs/my-markdown/main.pdf -e tex --no-check
