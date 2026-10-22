@@ -258,10 +258,10 @@ stages:
       nfiles: 2
     - path: caltech-thesis/main.tex
       hash: md5
-      md5: e1fe4136433e7cded8fd367d49ac2568
-      size: 5499
+      md5: 2f58eb305448972e2453d41d21efec12
+      size: 5539
     outs:
     - path: caltech-thesis/main.pdf
       hash: md5
-      md5: 38cc99e2445158008722ad22a34e326c
-      size: 159212
+      md5: cbb862d97b34666532b62c2eac35ba25
+      size: 159237
