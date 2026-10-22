@@ -1,13 +1,13 @@
 {
   "build-caltech-thesis": {
-    "start_time": "2026-10-22T00:19:55.917000",
-    "end_time": "2026-10-22T00:20:05.722000",
+    "start_time": "2026-10-22T00:27:44.166000",
+    "end_time": "2026-10-22T00:27:52.627000",
     "environment": "tex",
-    "git_rev": "5eb9c554e9e5f5382df89ac9c709e7dc6c320ed6",
+    "git_rev": "be2e6f2daac9ef8e0fa7c7efddf41762d0bb077a",
     "git_dirty": false,
-    "dvc_lock_hash": "sha256:8a3ab50f3508bc29bda626ae5ab8bf3ea9f5b302e1c191a28ece3de70d38709d",
-    "calkit_version": "0.49.3.dev15+gb94e507d",
-    "calkit_git_rev": "232470b75ecd960b97fd5bb5766b8adf8c630b9e",
+    "dvc_lock_hash": "sha256:c0a5a3bcff67b6b3345be29e3518c6928739dc884c0a4fcf0f09cc3f169b5318",
+    "calkit_version": "0.49.3.dev59+g16b6f29f4",
+    "calkit_git_rev": "16b6f29f429aa6f8043c72d1e2a6b88dcfe766dc",
     "system": {
       "machine_id": "33C4DDA7-7423-5B6A-B86F-EA6859EB058E",
       "os": "Darwin",
