@@ -37,8 +37,8 @@ stages:
       nfiles: 5
     - path: paper2/main.tex
       hash: md5
-      md5: fd2adeaaffce30ac772eb5bf3c667d73
-      size: 992
+      md5: f7ff30111cddccbc664b2883b0fb8cdd
+      size: 1045
     - path: paper2/thing.txt
       hash: md5
       md5: b130eeb413db6d877a36b1804252ff59
@@ -46,8 +46,8 @@ stages:
     outs:
     - path: paper2/main.pdf
       hash: md5
-      md5: ce039cc2d9b638213b8ceea7f42e1962
-      size: 87809
+      md5: d5534cdc4659c494da4ae1bed3d5b59e
+      size: 87834
   build-report:
     cmd: calkit latex build -e tex --no-check report/main.tex
     deps:
@@ -63,7 +63,7 @@ stages:
       nfiles: 9
     - path: report/main.tex
       hash: md5
-      md5: 7328295754f17b089cff276e49df0da6
+      md5: 49ecef720b8b45a4d9c0120114444e72
       size: 4574
     - path: report/references.bib
       hash: md5
@@ -72,8 +72,8 @@ stages:
     outs:
     - path: report/main.pdf
       hash: md5
-      md5: 8801ac265f6f3be9bfca943d43b92f75
-      size: 1310372
+      md5: d01fd57fe127365c0653713e52880eb3
+      size: 1310575
   notebook:
     cmd: calkit nb execute --environment py --no-check --to html 
       "notebook.ipynb"
