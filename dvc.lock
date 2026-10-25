@@ -1,7 +1,8 @@
 schema: '2.0'
 stages:
   build-paper:
-    cmd: calkit latex build -e tex --no-check paper/main.tex
+    cmd: calkit latex build -e tex --no-check --style-hash f6751a57eb98 
+      paper/main.tex
     deps:
     - path: .calkit/env-locks/tex
       hash: md5
@@ -12,15 +13,6 @@ stages:
       hash: md5
       md5: e3059f26f6b53ffae330d27e7b00ae15
       size: 49401
-    - path: paper/_calkit
-      hash: md5
-      md5: 4bd558272be2f9b0c2b71567f93518f8.dir
-      size: 50027
-      nfiles: 4
-    - path: paper/calkit.sty
-      hash: md5
-      md5: ecd131760c0c3e747f6f7c330bf207ce
-      size: 5179
     - path: paper/figures
       hash: md5
       md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
