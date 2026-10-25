@@ -12,6 +12,15 @@ stages:
       hash: md5
       md5: e3059f26f6b53ffae330d27e7b00ae15
       size: 49401
+    - path: paper/_calkit
+      hash: md5
+      md5: 4bd558272be2f9b0c2b71567f93518f8.dir
+      size: 50027
+      nfiles: 4
+    - path: paper/calkit.sty
+      hash: md5
+      md5: ecd131760c0c3e747f6f7c330bf207ce
+      size: 5179
     - path: paper/figures
       hash: md5
       md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
@@ -19,7 +28,7 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: 74cd6795c30e1425ff62ea4359ec9906
+      md5: 86eaed2d7ff1771d98df182b2caa85fc
       size: 2265
     - path: results/fit.json
       hash: md5
@@ -36,8 +45,8 @@ stages:
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: c20737e765f75c6337d832ae878ca3d0
-      size: 147815
+      md5: e6503a89a7ae3fdcebf06a4e49d73e1c
+      size: 147872
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
@@ -253,8 +262,8 @@ stages:
       nfiles: 2
     - path: calkit.yaml
       hash: md5
-      md5: b8dd579eea8b938f24d1a1f1ca290441
-      size: 6593
+      md5: c86ee8696681a16e140d7556d90639d5
+      size: 6669
     - path: docs/my-markdown/main.md
       hash: md5
       md5: 8fd9b10b7e8b48e911837794251e11d9
@@ -305,3 +314,41 @@ stages:
       hash: md5
       md5: 4239969b22461f41ec05be719bbd619b
       size: 146
+  build-paper-components:
+    cmd: calkit latex map-components --style-key 9cd92ff2d995 paper
+    deps:
+    - path: figures/fit.png
+      hash: md5
+      md5: e3059f26f6b53ffae330d27e7b00ae15
+      size: 49401
+    - path: paper/figures
+      hash: md5
+      md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
+      size: 18125
+      nfiles: 1
+    - path: paper/main.tex
+      hash: md5
+      md5: 0425f64147fd1d8f7f1539657ee9c943
+      size: 2265
+    - path: results/fit.json
+      hash: md5
+      md5: 4679386c8649f1f34c4d38a3d80550cd
+      size: 164
+    - path: results/sup.json
+      hash: md5
+      md5: 42b7b4f2921788ea14dac5566e6f06d0
+      size: 8
+    - path: tables/fit.tex
+      hash: md5
+      md5: 4239969b22461f41ec05be719bbd619b
+      size: 146
+    outs:
+    - path: paper/_calkit
+      hash: md5
+      md5: 4bd558272be2f9b0c2b71567f93518f8.dir
+      size: 50027
+      nfiles: 4
+    - path: paper/calkit.sty
+      hash: md5
+      md5: fffdd303cd16e8f6acac2a5cac1a41b2
+      size: 5117
