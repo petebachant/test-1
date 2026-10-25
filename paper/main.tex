@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{calkit}
 
 \title{A paper about many things}
 \author{Pete Bachant}
@@ -42,5 +43,37 @@ Here's more writing!
     \includegraphics[]{figures/000_000000000250000.png}
     \caption{This is a figure.}
 \end{figure}
+
+\section{Results}
+
+% Each \ck* command names a pipeline output by its path in the project, so
+% nothing has to be copied or converted into this folder by hand. Calkit
+% brings them into _calkit/ before building, and the build stage depends on
+% them, so changing scripts/fit.py and running the pipeline updates the paper.
+
+We fit a line to \ckvalue{results/fit.json}{n_samples} noisy samples,
+finding a slope of \ckvalue[.2f]{results/fit.json}{fit.slope} and an
+intercept of \ckvalue[.2f]{results/fit.json}{fit.intercept}, with an RMSE of
+\ckvalue[.3f]{results/fit.json}{rmse} and $R^2 = \ckvalue[.4f]{results/fit.json}{r2}$
+(Figure~\ref{fig:fit}, Table~\ref{tab:fit}).
+
+\begin{figure}[h]
+    \centering
+    \ckfigure[width=0.6\textwidth]{figures/fit.png}
+    \caption{A line fit to noisy data, made by \texttt{scripts/fit.py}.}
+    \label{fig:fit}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \caption{Fit summary.}
+    \label{tab:fit}
+    \cktable{tables/fit.tex}
+\end{table}
+
+A value from another stage's results works the same way: $a =
+\ckvalue{results/sup.json}{a}$. Something not produced yet prints as
+\ckvalue{results/fit.json}{coming_soon} with a warning instead of failing
+the build.
 
 \end{document}

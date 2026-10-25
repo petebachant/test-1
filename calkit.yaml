@@ -42,6 +42,16 @@ pipeline:
       environment: py
       outputs:
         - figures/test.png
+    fit:
+      kind: python-script
+      script_path: scripts/fit.py
+      environment: py
+      outputs:
+        - path: results/fit.json
+          storage: git
+        - figures/fit.png
+        - path: tables/fit.tex
+          storage: git
     build-paper:
       kind: latex
       target_path: paper/main.tex
@@ -94,11 +104,11 @@ pipeline:
       pdf:
         output_path: docs/my-markdown/main.pdf
         environment: tex
-
     build-caltech-thesis:
       kind: latex
       environment: tex
       target_path: caltech-thesis/main.tex
+
 publications:
   - path: paper/main.pdf
     title: A paper about things
@@ -116,12 +126,12 @@ publications:
     description:
     kind: report
     stage: build-report
-
   - path: caltech-thesis/main.pdf
-    title: '[Thesis Title]'
-    description:
-    kind:
+    title: "[Thesis Title]"
+    description: This is my thesis.
+    kind: phd-thesis
     stage: build-caltech-thesis
+
 showcase:
   - publication: paper/main.pdf
 
@@ -143,12 +153,12 @@ questions:
         explanation: It's obvious.
   - question: Will this update my full name?
     answer: Sure, yeah. Whatever.
-
   - question: Can I still add a question?
     hypothesis: Yes.
     answer: Definitely.
   - Can I add another?
   - This one doesn't have an answer yet.
+
 notebooks:
   - path: notebook.ipynb
     environment: py
@@ -162,9 +172,9 @@ overleaf_sync:
     url: https://www.overleaf.com/project/54b68eff0ee71ad2767b704a
   report:
     url: https://www.overleaf.com/project/699f2a0fb20a38960a52bc26
-
   caltech-thesis:
     url: https://www.overleaf.com/project/6ad91b383024e401e964b57a
+
 figures:
   - path: figures/ups2.jpg
     imported_from:
@@ -211,6 +221,7 @@ figures:
   - path: report/figures/raw_timeseries.png
     imported_from:
       url: ffff
+
 releases:
   v0.0.2:
     kind: project

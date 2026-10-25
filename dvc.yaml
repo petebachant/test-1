@@ -13,12 +13,31 @@ stages:
           cache: true
     desc: Automatically generated from the 'notebook' stage in calkit.yaml.
       Changes made here will be overwritten.
+  fit:
+    cmd: calkit xenv -n py --no-check -- python scripts/fit.py
+    deps:
+      - scripts/fit.py
+      - .calkit/envs/py/uv.lock
+    outs:
+      - results/fit.json:
+          cache: false
+          persist: false
+      - figures/fit.png
+      - tables/fit.tex:
+          cache: false
+          persist: false
+    desc: Automatically generated from the 'fit' stage in calkit.yaml. Changes
+      made here will be overwritten.
   build-paper:
     cmd: calkit latex build -e tex --no-check paper/main.tex
     deps:
       - paper/main.tex
       - paper/figures
       - .calkit/env-locks/tex
+      - results/fit.json
+      - figures/fit.png
+      - tables/fit.tex
+      - results/sup.json
     outs:
       - paper/main.pdf
     desc: Automatically generated from the 'build-paper' stage in calkit.yaml.

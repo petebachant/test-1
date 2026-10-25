@@ -8,6 +8,10 @@ stages:
       md5: 551b3ad9651bffcb5bacc673167d130f.dir
       size: 2832
       nfiles: 2
+    - path: figures/fit.png
+      hash: md5
+      md5: e3059f26f6b53ffae330d27e7b00ae15
+      size: 49401
     - path: paper/figures
       hash: md5
       md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
@@ -15,13 +19,25 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: a5d34b999f35eda9a172f3e034f1ebd2
-      size: 862
+      md5: 74cd6795c30e1425ff62ea4359ec9906
+      size: 2265
+    - path: results/fit.json
+      hash: md5
+      md5: 4679386c8649f1f34c4d38a3d80550cd
+      size: 164
+    - path: results/sup.json
+      hash: md5
+      md5: 42b7b4f2921788ea14dac5566e6f06d0
+      size: 8
+    - path: tables/fit.tex
+      hash: md5
+      md5: 4239969b22461f41ec05be719bbd619b
+      size: 146
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: 039cc8fe4386b488ec8bd46d5b3b24ed
-      size: 84671
+      md5: c20737e765f75c6337d832ae878ca3d0
+      size: 147815
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
@@ -237,8 +253,8 @@ stages:
       nfiles: 2
     - path: calkit.yaml
       hash: md5
-      md5: 7f784350b6633cbe415cfe356844ab91
-      size: 6320
+      md5: b8dd579eea8b938f24d1a1f1ca290441
+      size: 6593
     - path: docs/my-markdown/main.md
       hash: md5
       md5: 8fd9b10b7e8b48e911837794251e11d9
@@ -265,3 +281,27 @@ stages:
       hash: md5
       md5: 9bd6f11216b0ac954b02ca4695a8cf22
       size: 159301
+  fit:
+    cmd: calkit xenv -n py --no-check -- python scripts/fit.py
+    deps:
+    - path: .calkit/envs/py/uv.lock
+      hash: md5
+      md5: 071ddf442062fbeed94bad0a00336278
+      size: 185670
+    - path: scripts/fit.py
+      hash: md5
+      md5: a39e87c27168ff5a162ffbe9bd7c1283
+      size: 1471
+    outs:
+    - path: figures/fit.png
+      hash: md5
+      md5: e3059f26f6b53ffae330d27e7b00ae15
+      size: 49401
+    - path: results/fit.json
+      hash: md5
+      md5: 4679386c8649f1f34c4d38a3d80550cd
+      size: 164
+    - path: tables/fit.tex
+      hash: md5
+      md5: 4239969b22461f41ec05be719bbd619b
+      size: 146
