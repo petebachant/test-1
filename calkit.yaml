@@ -175,6 +175,8 @@ overleaf_sync:
   caltech-thesis:
     url: https://www.overleaf.com/project/6ad91b383024e401e964b57a
 
+  paper:
+    url: https://www.overleaf.com/project/6addfd476e26d2e60e717942
 figures:
   - path: figures/ups2.jpg
     imported_from:
