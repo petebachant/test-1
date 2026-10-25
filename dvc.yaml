@@ -34,12 +34,28 @@ stages:
       - paper/main.tex
       - paper/figures
       - .calkit/env-locks/tex
+      - paper/_calkit
+      - paper/calkit.sty
+    outs:
+      - paper/main.pdf
+    desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
+      Changes made here will be overwritten.
+  build-paper-components:
+    cmd: calkit latex map-components paper
+    deps:
+      - paper/main.tex
+      - paper/figures
       - results/fit.json
       - figures/fit.png
       - tables/fit.tex
       - results/sup.json
     outs:
-      - paper/main.pdf
+      - paper/_calkit:
+          cache: false
+          persist: true
+      - paper/calkit.sty:
+          cache: false
+          persist: true
     desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
       Changes made here will be overwritten.
   build-paper2:
