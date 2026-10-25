@@ -10,5 +10,9 @@
   "caltech-thesis": {
     "project_id": "6ad91b383024e401e964b57a",
     "last_sync_commit": "259e811b3b0cbf025d92e3d533231ec133e32513"
+  },
+  "paper": {
+    "project_id": "6addfd476e26d2e60e717942",
+    "last_sync_commit": "413169241a5adada3f8ca38415d457ccb117bbcf"
   }
 }
