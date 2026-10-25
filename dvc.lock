@@ -14,12 +14,12 @@ stages:
       size: 49401
     - path: paper/_calkit/values.tex
       hash: md5
-      md5: bb1e27ed974adb3e40756a2dc230444e
-      size: 482
+      md5: 813f764047e1348a3ac62bd7259b363b
+      size: 394
     - path: paper/calkit.sty
       hash: md5
-      md5: ba4d71728e50046ce9858b15fe360ae4
-      size: 7609
+      md5: 16ff23b70d54881d76c27015b85db713
+      size: 8862
     - path: paper/figures
       hash: md5
       md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
