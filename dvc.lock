@@ -20,8 +20,8 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: 8f87b82b747e62e7f21c999cda2e24f4
-      size: 2265
+      md5: 4b3ef011b0867d12cc78b9a494786577
+      size: 2308
     - path: results/fit.json
       hash: md5
       md5: 4679386c8649f1f34c4d38a3d80550cd
@@ -37,8 +37,8 @@ stages:
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: ee5bc9d68a32179a1c405a9e2aa898bf
-      size: 147876
+      md5: 7e2952071973882b7d206904461f1e47
+      size: 148057
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
