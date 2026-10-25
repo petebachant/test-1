@@ -29,8 +29,7 @@ stages:
     desc: Automatically generated from the 'fit' stage in calkit.yaml. Changes
       made here will be overwritten.
   build-paper:
-    cmd: calkit latex build -e tex --no-check --style-hash f6751a57eb98
-      paper/main.tex
+    cmd: calkit latex build -e tex --no-check paper/main.tex
     deps:
       - paper/main.tex
       - paper/figures
@@ -39,6 +38,8 @@ stages:
       - figures/fit.png
       - tables/fit.tex
       - results/sup.json
+      - paper/calkit.sty
+      - paper/_calkit/values.tex
     outs:
       - paper/main.pdf
     desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
