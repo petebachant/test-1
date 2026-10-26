@@ -14,8 +14,8 @@ stages:
       size: 49401
     - path: paper/_calkit/values.tex
       hash: md5
-      md5: 813f764047e1348a3ac62bd7259b363b
-      size: 394
+      md5: bcb6230f2643161df47180ce54520227
+      size: 439
     - path: paper/calkit.sty
       hash: md5
       md5: 16ff23b70d54881d76c27015b85db713
@@ -27,16 +27,16 @@ stages:
       nfiles: 1
     - path: paper/main.tex
       hash: md5
-      md5: 4b3ef011b0867d12cc78b9a494786577
-      size: 2308
+      md5: dccd5adb0b251380c10b7af929e6faf3
+      size: 2358
     - path: results/fit.json
       hash: md5
       md5: 4679386c8649f1f34c4d38a3d80550cd
       size: 164
     - path: results/sup.json
       hash: md5
-      md5: 42b7b4f2921788ea14dac5566e6f06d0
-      size: 8
+      md5: cdaadedb6a5a47191b516772fc6cf30b
+      size: 22
     - path: tables/fit.tex
       hash: md5
       md5: 4239969b22461f41ec05be719bbd619b
@@ -44,8 +44,8 @@ stages:
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: 7e2952071973882b7d206904461f1e47
-      size: 148057
+      md5: 3b3636a18400f0217667fe8be0014b6a
+      size: 148445
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
@@ -188,21 +188,21 @@ stages:
       size: 185670
     - path: .calkit/notebooks/cleaned/notebooks/other.ipynb
       hash: md5
-      md5: e32a53412fb960d99a7497f77a8989d5
-      size: 722
+      md5: a44a058d69f79c5d5b087f76f387e553
+      size: 738
     outs:
     - path: .calkit/notebooks/executed/notebooks/other.ipynb
       hash: md5
-      md5: 89a0d6e3e4877275dec22d4d3fda1b77
-      size: 2793
+      md5: 30d80680b3c0a921280dbd3a0b37d8d8
+      size: 2810
     - path: .calkit/notebooks/html/notebooks/other.html
       hash: md5
-      md5: f833399cea46bad09b1dded61a4023fe
-      size: 272184
+      md5: b7518ae8ea37861724ca7f8cf1e4825e
+      size: 272292
     - path: results/sup.json
       hash: md5
-      md5: 42b7b4f2921788ea14dac5566e6f06d0
-      size: 8
+      md5: cdaadedb6a5a47191b516772fc6cf30b
+      size: 22
   paper2-analysis:
     cmd: calkit xenv -n py --no-check -- python scripts/paper2-analysis.py
     deps:
