@@ -14,12 +14,12 @@ stages:
       size: 49401
     - path: paper/_calkit/values.tex
       hash: md5
-      md5: bcb6230f2643161df47180ce54520227
-      size: 439
+      md5: da794f7d861fa091b38d51d026c84429
+      size: 493
     - path: paper/calkit.sty
       hash: md5
-      md5: 16ff23b70d54881d76c27015b85db713
-      size: 8862
+      md5: a14d1f2d68f15d0e36d779139c92385c
+      size: 9195
     - path: paper/figures
       hash: md5
       md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
@@ -113,8 +113,8 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebook.ipynb
       hash: md5
-      md5: 1cdb1cef5971fc8e9c03ff88880a56d4
-      size: 23933
+      md5: 5a1af41e5fb03c786946075e873c1a82
+      size: 23932
     - path: .calkit/notebooks/html/notebook.html
       hash: md5
       md5: b8500217b15762d42d21f8afe06b4300
@@ -138,12 +138,12 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebook-julia.ipynb
       hash: md5
-      md5: d4387d09e54250b876083012129c3293
-      size: 1706411
+      md5: b65b3d038eeb8f805264748e57603d99
+      size: 1706313
     - path: .calkit/notebooks/html/notebook-julia.html
       hash: md5
-      md5: 871df64783f8e85175304f5f37eaec2e
-      size: 1977325
+      md5: 7bd12b41ce9dc65b41c4d1f9177906cd
+      size: 1977116
     - path: figures/sine.png
       hash: md5
       md5: 8911c9825fc37135c6c0f4e9dd5f7a1e
@@ -164,8 +164,8 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebooks/conda-polars.ipynb
       hash: md5
-      md5: 047b8f93adfdb8ceecfa7b083358c17f
-      size: 2757
+      md5: a5b8b3d98c5df4ce081a7068e074827f
+      size: 2758
     - path: .calkit/notebooks/html/notebooks/conda-polars.html
       hash: md5
       md5: 0c1f1cf34f7d8c4701551ca551f128a0
@@ -193,7 +193,7 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebooks/other.ipynb
       hash: md5
-      md5: 30d80680b3c0a921280dbd3a0b37d8d8
+      md5: e5e34c080b4fdf693f61acd7d03bc9eb
       size: 2810
     - path: .calkit/notebooks/html/notebooks/other.html
       hash: md5
