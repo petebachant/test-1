@@ -18,8 +18,8 @@ stages:
       size: 493
     - path: paper/calkit.sty
       hash: md5
-      md5: 8ec927b8241833b51716307909cd73c0
-      size: 9548
+      md5: 0869a4a8c673563d0688afd07ce502ea
+      size: 11239
     - path: paper/figures
       hash: md5
       md5: d0b90c0e6a4a259c649b33d12fffcbd4.dir
@@ -44,8 +44,8 @@ stages:
     outs:
     - path: paper/main.pdf
       hash: md5
-      md5: 03fd62633eae37aa338ac4e5add77d5b
-      size: 149595
+      md5: 461ab84f8813715fc1ec7aa861922514
+      size: 149629
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
