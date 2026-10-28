@@ -109,6 +109,15 @@ pipeline:
       environment: tex
       target_path: caltech-thesis/main.tex
 
+    build-pubs-test-2-reupped:
+      kind: latex
+      target_path: pubs/test-2-reupped/main.tex
+      environment: tex
+      inputs:
+        - pubs/test-2-reupped/figures
+        - pubs/test-2-reupped/thing.txt
+        - pubs/test-2-reupped/_calkit
+        - pubs/test-2-reupped/calkit.sty
 publications:
   - path: paper/main.pdf
     title: A paper about things
@@ -132,6 +141,11 @@ publications:
     kind: phd-thesis
     stage: build-caltech-thesis
 
+  - path: pubs/test-2-reupped/main.pdf
+    title: A paper about things
+    description:
+    kind: journal-article
+    stage: build-pubs-test-2-reupped
 showcase:
   - publication: paper/main.pdf
 
@@ -177,6 +191,8 @@ overleaf_sync:
   paper:
     url: https://www.overleaf.com/project/6addfd476e26d2e60e717942
 
+  pubs/test-2-reupped:
+    url: https://www.overleaf.com/project/6ad24eb5a6adc88e17c8cf58
 figures:
   - path: figures/ups2.jpg
     imported_from:

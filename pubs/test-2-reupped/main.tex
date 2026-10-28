@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{calkit}
+\usepackage{hyperref}
+
+% COMMENT id=7cd97d6d resolved=true
+%   Pete Bachant <petebachant@gmail.com> (2026-10-09 18:22):
+%     Random comment
+\title{A paper about things}
+\author{Pete Bachant}
+\date{January 2016}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This is the intro.
+
+I made this change on GitHub, seeing how I can sync back with Overleaf's GitHub sync.
+
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+I'm going to do some more writing here.
+
+Maybe I'll include a nice little figure.
+Yeah, nice.
+
+\section{This is a new section}
+
+In this section, we write.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[]{figures/000_000000000250000.png}
+    \caption{This is a figure, nice.}
+\end{figure}
+
+This is some more text. No just write some more stuff.
+
+More still. And some other stuff.
+
+Here's some from Overleaf. Will we miss it?
+
+Here's some from local.
+
+Here's some from the Calkit integrated editor.
+
+This is more from Overleaf. Going to sync with the extension.
+
+\section{Calkit content}
+
+Formatted: \ckvalue[.2f]{results/metrics.json}{rmse}.
+Unformatted: \ckvalue{results/metrics.json}{rmse}.
+Key with an underscore: \ckvalue{results/metrics.json}{n_runs}.
+Dotted key: \ckvalue[.3g]{results/nested.json}{fit.slope}.
+Not generated yet: \ckvalue{results/metrics.json}{not_generated}.
+
+\begin{figure}[h]
+    \centering
+    \ckfigure[width=0.3\textwidth]{figures/plot.png}
+    \caption{A figure from the project.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \ckfigure[width=0.3\textwidth]{figures/missing.png}
+    \caption{A figure not copied yet.}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \cktable{tables/summary.tex}
+    \caption{A table from the project.}
+\end{table}
+
+
+
+\end{document}

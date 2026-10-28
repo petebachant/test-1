@@ -1,7 +1,6 @@
 stages:
   notebook:
-    cmd: calkit nb execute --environment py --no-check --to html
-      "notebook.ipynb"
+    cmd: calkit nb execute --environment py --no-check --to html "notebook.ipynb"
     deps:
       - .calkit/notebooks/cleaned/notebook.ipynb
       - .calkit/envs/py/uv.lock
@@ -11,8 +10,8 @@ stages:
           cache: true
       - .calkit/notebooks/html/notebook.html:
           cache: true
-    desc: Automatically generated from the 'notebook' stage in calkit.yaml.
-      Changes made here will be overwritten.
+    desc: Automatically generated from the 'notebook' stage in calkit.yaml. Changes
+      made here will be overwritten.
   fit:
     cmd: calkit xenv -n py --no-check -- python scripts/fit.py
     deps:
@@ -26,8 +25,8 @@ stages:
       - tables/fit.tex:
           cache: false
           persist: false
-    desc: Automatically generated from the 'fit' stage in calkit.yaml. Changes
-      made here will be overwritten.
+    desc: Automatically generated from the 'fit' stage in calkit.yaml. Changes made
+      here will be overwritten.
   build-paper:
     cmd: calkit latex build -e tex --no-check paper/main.tex
     deps:
@@ -42,8 +41,8 @@ stages:
       - paper/_calkit/values.tex
     outs:
       - paper/main.pdf
-    desc: Automatically generated from the 'build-paper' stage in calkit.yaml.
-      Changes made here will be overwritten.
+    desc: Automatically generated from the 'build-paper' stage in calkit.yaml. Changes
+      made here will be overwritten.
   build-paper2:
     cmd: calkit latex build -e tex --no-check paper2/main.tex
     deps:
@@ -53,8 +52,8 @@ stages:
       - .calkit/env-locks/tex
     outs:
       - paper2/main.pdf
-    desc: Automatically generated from the 'build-paper2' stage in calkit.yaml.
-      Changes made here will be overwritten.
+    desc: Automatically generated from the 'build-paper2' stage in calkit.yaml. Changes
+      made here will be overwritten.
   build-report:
     cmd: calkit latex build -e tex --no-check report/main.tex
     deps:
@@ -64,11 +63,10 @@ stages:
       - .calkit/env-locks/tex
     outs:
       - report/main.pdf
-    desc: Automatically generated from the 'build-report' stage in calkit.yaml.
-      Changes made here will be overwritten.
+    desc: Automatically generated from the 'build-report' stage in calkit.yaml. Changes
+      made here will be overwritten.
   notebook-julia:
-    cmd: calkit nb execute --environment j1 --no-check --to html
-      "notebook-julia.ipynb"
+    cmd: calkit nb execute --environment j1 --no-check --to html "notebook-julia.ipynb"
     deps:
       - .calkit/notebooks/cleaned/notebook-julia.ipynb
       - Manifest.toml
@@ -78,11 +76,10 @@ stages:
           cache: false
       - .calkit/notebooks/html/notebook-julia.html:
           cache: false
-    desc: Automatically generated from the 'notebook-julia' stage in
-      calkit.yaml. Changes made here will be overwritten.
+    desc: Automatically generated from the 'notebook-julia' stage in calkit.yaml.
+      Changes made here will be overwritten.
   notebooks-conda-polars:
-    cmd: calkit nb execute --environment conda-polars --no-check --to html
-      "notebooks/conda-polars.ipynb"
+    cmd: calkit nb execute --environment conda-polars --no-check --to html "notebooks/conda-polars.ipynb"
     deps:
       - .calkit/notebooks/cleaned/notebooks/conda-polars.ipynb
       - .calkit/env-locks/conda-polars
@@ -93,11 +90,10 @@ stages:
           cache: false
       - .calkit/notebooks/html/notebooks/conda-polars.html:
           cache: false
-    desc: Automatically generated from the 'notebooks-conda-polars' stage in
-      calkit.yaml. Changes made here will be overwritten.
+    desc: Automatically generated from the 'notebooks-conda-polars' stage in calkit.yaml.
+      Changes made here will be overwritten.
   notebooks-other:
-    cmd: calkit nb execute --environment py --no-check --to html
-      "notebooks/other.ipynb"
+    cmd: calkit nb execute --environment py --no-check --to html "notebooks/other.ipynb"
     deps:
       - .calkit/notebooks/cleaned/notebooks/other.ipynb
       - .calkit/envs/py/uv.lock
@@ -109,8 +105,8 @@ stages:
           cache: false
       - .calkit/notebooks/html/notebooks/other.html:
           cache: false
-    desc: Automatically generated from the 'notebooks-other' stage in
-      calkit.yaml. Changes made here will be overwritten.
+    desc: Automatically generated from the 'notebooks-other' stage in calkit.yaml.
+      Changes made here will be overwritten.
   build-caltech-thesis:
     cmd: calkit latex build -e tex --no-check caltech-thesis/main.tex
     deps:
@@ -118,11 +114,25 @@ stages:
       - .calkit/env-locks/tex
     outs:
       - caltech-thesis/main.pdf
-    desc: Automatically generated from the 'build-caltech-thesis' stage in
-      calkit.yaml. Changes made here will be overwritten.
+    desc: Automatically generated from the 'build-caltech-thesis' stage in calkit.yaml.
+      Changes made here will be overwritten.
+  build-pubs-test-2-reupped:
+    cmd: calkit latex build -e tex --no-check pubs/test-2-reupped/main.tex
+    deps:
+      - pubs/test-2-reupped/main.tex
+      - pubs/test-2-reupped/figures
+      - pubs/test-2-reupped/thing.txt
+      - pubs/test-2-reupped/_calkit
+      - pubs/test-2-reupped/calkit.sty
+      - .calkit/env-locks/tex
+      - pubs/test-2-reupped/_calkit/values.tex
+    outs:
+      - pubs/test-2-reupped/main.pdf
+    desc: Automatically generated from the 'build-pubs-test-2-reupped' stage in calkit.yaml.
+      Changes made here will be overwritten.
   my-markdown/pdf:
-    cmd: calkit latex from-markdown docs/my-markdown/main.md -o
-      docs/my-markdown/main.pdf -e tex --no-check
+    cmd: calkit latex from-markdown docs/my-markdown/main.md -o docs/my-markdown/main.pdf
+      -e tex --no-check
     deps:
       - docs/my-markdown/main.md
       - calkit.yaml
@@ -130,5 +140,5 @@ stages:
     outs:
       - docs/my-markdown/main.pdf:
           cache: true
-    desc: Automatically generated from the 'my-markdown/pdf' stage in
-      calkit.yaml. Changes made here will be overwritten.
+    desc: Automatically generated from the 'my-markdown/pdf' stage in calkit.yaml.
+      Changes made here will be overwritten.
