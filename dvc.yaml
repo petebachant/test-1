@@ -17,14 +17,7 @@ stages:
     deps:
       - scripts/fit.py
       - .calkit/envs/py/uv.lock
-    outs:
-      - results/fit.json:
-          cache: false
-          persist: false
-      - figures/fit.png
-      - tables/fit.tex:
-          cache: false
-          persist: false
+    outs: []
     desc: Automatically generated from the 'fit' stage in calkit.yaml. Changes made
       here will be overwritten.
   build-paper:
@@ -34,11 +27,11 @@ stages:
       - paper/figures
       - .calkit/env-locks/tex
       - results/fit.json
-      - figures/fit.png
       - tables/fit.tex
       - results/sup.json
       - paper/calkit.sty
       - paper/_calkit/values.tex
+      - paper/_calkit/tables/fit.tex
     outs:
       - paper/main.pdf
     desc: Automatically generated from the 'build-paper' stage in calkit.yaml. Changes
@@ -125,7 +118,12 @@ stages:
       - pubs/test-2-reupped/_calkit
       - pubs/test-2-reupped/calkit.sty
       - .calkit/env-locks/tex
+      - figures/sick/portland-ups.jpeg
+      - results/fit.json
+      - tables/fit.tex
       - pubs/test-2-reupped/_calkit/values.tex
+      - pubs/test-2-reupped/_calkit/figures/sick/portland-ups.jpeg
+      - pubs/test-2-reupped/_calkit/tables/fit.tex
     outs:
       - pubs/test-2-reupped/main.pdf
     desc: Automatically generated from the 'build-pubs-test-2-reupped' stage in calkit.yaml.
