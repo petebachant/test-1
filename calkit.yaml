@@ -281,3 +281,7 @@ releases:
 
 references:
   - path: references.bib
+misc:
+  - path: pubs/test-2-reupped/figures/000_000000000250000.png
+    imported_from:
+      url: https://i-forget.net
