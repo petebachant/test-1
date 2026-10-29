@@ -296,22 +296,30 @@ stages:
       hash: md5
       md5: 071ddf442062fbeed94bad0a00336278
       size: 185670
+    - path: data/calibration.csv
+      hash: md5
+      md5: 2de51fbe43873700ac41bd62c523df21
+      size: 29
+    - path: data/raw.csv
+      hash: md5
+      md5: 899aef2f4597af2c5dde58182bce1e1b
+      size: 20009
     - path: scripts/fit.py
       hash: md5
-      md5: a39e87c27168ff5a162ffbe9bd7c1283
-      size: 1471
+      md5: 594373df601540688d6fcda0258572df
+      size: 1546
     outs:
     - path: figures/fit.png
       hash: md5
-      md5: e3059f26f6b53ffae330d27e7b00ae15
-      size: 49401
+      md5: be72242c3228aab37875de68fc6b6a9d
+      size: 49404
     - path: results/fit.json
       hash: md5
-      md5: 4679386c8649f1f34c4d38a3d80550cd
-      size: 164
+      md5: 3cc43f94f5fb13ecfea613dbd5e3a79b
+      size: 165
     - path: tables/fit.tex
       hash: md5
-      md5: 4239969b22461f41ec05be719bbd619b
+      md5: 6a394f2fce1f5f1ce61a82df76951852
       size: 146
   build-paper-components:
     cmd: calkit latex map-components --style-key 9cd92ff2d995 paper
@@ -351,3 +359,23 @@ stages:
       hash: md5
       md5: fffdd303cd16e8f6acac2a5cac1a41b2
       size: 5117
+  simulate:
+    cmd: calkit xenv -n py --no-check -- python scripts/simulate.py
+    deps:
+    - path: .calkit/envs/py/uv.lock
+      hash: md5
+      md5: 071ddf442062fbeed94bad0a00336278
+      size: 185670
+    - path: data/params.json
+      hash: md5
+      md5: 180139960d1894efd4263c9d84d443be
+      size: 81
+    - path: scripts/simulate.py
+      hash: md5
+      md5: 30536fd1deddc8e158abbf91cfc418a3
+      size: 439
+    outs:
+    - path: data/raw.csv
+      hash: md5
+      md5: 899aef2f4597af2c5dde58182bce1e1b
+      size: 20009

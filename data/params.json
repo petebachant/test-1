@@ -1,0 +1,7 @@
+{
+  "n": 400,
+  "slope": 2.5,
+  "intercept": 1.0,
+  "noise": 1.5,
+  "seed": 42
+}

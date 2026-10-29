@@ -42,10 +42,28 @@ pipeline:
       environment: py
       outputs:
         - figures/test.png
+    simulate:
+      kind: python-script
+      script_path: scripts/simulate.py
+      environment: py
+      inputs:
+        - data/params.json
+      outputs:
+        - path: data/raw.csv
+          storage: git
     fit:
       kind: python-script
       script_path: scripts/fit.py
       environment: py
+      inputs:
+        - data/raw.csv
+        - data/calibration.csv
+      outputs:
+        - path: results/fit.json
+          storage: git
+        - figures/fit.png
+        - path: tables/fit.tex
+          storage: git
     build-paper:
       kind: latex
       target_path: paper/main.tex
@@ -187,6 +205,12 @@ overleaf_sync:
 
   pubs/test-2-reupped:
     url: https://www.overleaf.com/project/6ad24eb5a6adc88e17c8cf58
+datasets:
+  - path: data/params.json
+    title: Simulation parameters
+    created_by:
+      name: Pete Bachant
+      email: petebachant@gmail.com
 figures:
   - path: figures/ups2.jpg
     imported_from:
